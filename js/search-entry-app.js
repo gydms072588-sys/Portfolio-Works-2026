@@ -5,7 +5,10 @@
  const skills = document.getElementById('skillsPage');
  const intro = document.getElementById('openingIntro');
  const navigation = performance.getEntriesByType('navigation')[0];
- const isReload = true; // Search entry reuses original router but bypasses Opening.
+ const isReload = navigation?.type === 'reload';
+ // 명시적인 내부 경로(Works 홈 복귀 포함)는 오프닝을 다시 실행하지 않습니다.
+ const isInternalEntry = ['#main', '#profile', '#skills', '#works'].includes(location.hash);
+ const skipOpening = isReload || isInternalEntry || navigation?.type === 'back_forward';
  const scrollPositions = { main: 0, profile: 0, skills: 0 };
  let openingDone = false;
  let current = null;
@@ -54,7 +57,7 @@
  });
  addEventListener('hashchange', render);
  addEventListener('pageshow', event => { if (event.persisted) render(); });
- if (isReload) {
+ if (skipOpening) {
   intro.hidden = true;
   document.documentElement.classList.remove('intro-active', 'intro-revealing');
   document.body.classList.remove('intro-active');
