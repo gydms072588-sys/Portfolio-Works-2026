@@ -421,3 +421,15 @@
  .opening-intro:not(.is-mobile-gathering) .opening-card:last-child { grid-column:2 / span 2; }
  .opening-intro .opening-card__label { left:8px;right:8px;bottom:12px;font-size:11px; }
 }
+/* Works shapes reuse the opening artwork; keep category silhouette and controls. */
+.works-category{overflow:hidden;}
+.works-category .opening-card__visual{overflow:hidden;}
+.works-category .works-category-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.works-category .opening-card__label{z-index:2;}
+/* Works category hover: 80% black overlay and centred category name. */
+.works-category::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.8);opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1;}
+.works-category:hover::after,.works-category:focus-visible::after{opacity:1;}
+.works-category .opening-card__label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;color:#fff;font-size:clamp(20px,2.2vw,32px);line-height:1.3;opacity:0;transition:opacity .25s ease;pointer-events:none;}
+.works-category:hover .opening-card__label,.works-category:focus-visible .opening-card__label{opacity:1;}
+@media(hover:none){.works-category::after{opacity:.55;}.works-category .opening-card__label{opacity:1;}}
+@media(prefers-reduced-motion:reduce){.works-category::after,.works-category .opening-card__label{transition:none;}}

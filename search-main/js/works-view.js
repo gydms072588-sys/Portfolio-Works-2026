@@ -26,13 +26,15 @@
  ];
  // 원본 데이터는 보존하고 설정에 따라 표시할 카테고리만 선택합니다.
  const settings=globalThis.PortfolioWorksSettings;
- const visibleCategories=categories.filter(c=>settings.motionVideoEnabled||c.id!=='video-editing').sort((a,b)=>settings.categoryFiles.indexOf(a.url?.split('/').pop()||({'design':'content-design.html','ux-ui':'uxui.html','indesign':'visual-design.html','video-editing':'motion-video.html'}[a.id]))-settings.categoryFiles.indexOf(b.url?.split('/').pop()||({'design':'content-design.html','ux-ui':'uxui.html','indesign':'visual-design.html','video-editing':'motion-video.html'}[b.id])));
+ const categoryOrder=['design','ux-ui','indesign','video-editing'];
+ const visibleCategories=categories.filter(c=>settings.motionVideoEnabled||c.id!=='video-editing').sort((a,b)=>categoryOrder.indexOf(a.id)-categoryOrder.indexOf(b.id));
  grid.dataset.visibleCount=String(visibleCategories.length);
  grid.style.setProperty('--visible-categories',String(visibleCategories.length));
  for(const category of visibleCategories){
   const button=document.createElement('button');button.type='button';button.className='works-category opening-card opening-card--'+category.visual;button.dataset.categoryId=category.id;button.setAttribute('aria-pressed','false');
   const visual=document.createElement('span');visual.className='opening-card__visual';visual.setAttribute('aria-hidden','true');
-  const label=document.createElement('span');label.className='opening-card__label';label.textContent=category.label;button.append(visual,label);
+  const covers={'design':'content-design','ux-ui':'uxui','indesign':'visual-design'};if(covers[category.id]){const cover=document.createElement('img');cover.className='works-category-cover';cover.src='./assets/images/opening-covers/'+covers[category.id]+'-opening.png';cover.alt='';visual.append(cover);}
+  const label=document.createElement('span');label.className='opening-card__label';label.textContent=({'design':'Content Design','ux-ui':'UX/UI','indesign':'Visual Design'})[category.id]||category.label;button.append(visual,label);
   button.addEventListener('click',()=>{if(grid.inert)return;if(category.url){const link=document.createElement('a');link.href=category.url;link.target='_blank';link.rel='noopener noreferrer';link.click();}grid.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));main.dispatchEvent(new CustomEvent('portfolio-works-category-select',{bubbles:true,detail:{categoryId:category.id,url:category.url}}));});grid.append(button);
  }
  let desired=false,active=false,revision=0,animation=null,cardAnimations=[];
