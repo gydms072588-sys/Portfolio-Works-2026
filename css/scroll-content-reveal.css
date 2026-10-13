@@ -1,0 +1,3 @@
+/* JS가 연결된 미등장 콘텐츠만 숨깁니다. 크기와 문서 흐름은 유지합니다. */
+.scroll-content-pending{opacity:0;}
+@media(prefers-reduced-motion:reduce){.scroll-content-pending{opacity:1;}}

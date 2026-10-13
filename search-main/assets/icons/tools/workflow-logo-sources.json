@@ -1,0 +1,19 @@
+[
+  {
+    "name": "google",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/google.svg"
+  },
+  {
+    "name": "premierepro",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/13.21.0/icons/adobepremierepro.svg"
+  },
+  {
+    "name": "higgsfield",
+    "source": "https://higgsfield.ai/icon.png"
+  },
+  {
+    "name": "capcut",
+    "source": "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/common/images/lv_web-2.ico",
+    "file": "capcut.ico"
+  }
+]

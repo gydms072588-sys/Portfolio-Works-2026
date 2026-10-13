@@ -1,0 +1,24 @@
+/* 모바일 상세 Works는 PC와 동일한 프로젝트 데이터 및 표시 상태를 사용합니다. */
+@media(max-width:767px){
+ body[data-mobile-pc-content] .works-showcase .project-card:not([data-current]){display:none;}
+ body[data-mobile-pc-content] .works-showcase .project-card+.project-card{margin-top:0;}
+ body[data-mobile-pc-content] .works-showcase .project-summary{display:block;order:2;min-width:0;}
+ body[data-mobile-pc-content] .works-showcase .project-cover{order:1;margin-bottom:24px;}
+ body[data-mobile-pc-content] .works-showcase .project-card-inner{gap:0;min-height:0;height:auto;padding:28px 20px;width:100%;}
+ body[data-mobile-pc-content] .works-showcase .project-info-toggle,body[data-mobile-pc-content] .works-showcase .project-info-panel{display:none;}
+ body[data-mobile-pc-content] .works-showcase .project-summary-text,body[data-mobile-pc-content] .works-showcase .project-intent,body[data-mobile-pc-content] .works-showcase .project-summary dd{font-size:16px;line-height:1.65;word-break:keep-all;}
+ body[data-mobile-pc-content] .works-showcase .project-intent{margin:24px 0;}
+ body[data-mobile-pc-content] .works-showcase .project-summary dl{margin-block:24px 0;}
+ body[data-mobile-pc-content] .works-showcase .project-actions{margin-top:24px;}
+ body[data-mobile-pc-content] .works-showcase .project-actions a{min-height:48px;display:flex;align-items:center;justify-content:center;padding:12px 20px;font-size:16px;}
+ body[data-mobile-pc-content] .works-showcase:not(.hotelspick-showcase) .project-category-controls{display:flex;position:static;justify-content:center;gap:16px;padding:16px 20px 28px;transform:none;}
+ body[data-mobile-pc-content] .works-showcase:not(.hotelspick-showcase) .project-category-arrow{display:block;width:48px;height:48px;}
+ body[data-mobile-pc-content] .works-showcase .project-summary h3{overflow-wrap:anywhere;}
+ body[data-mobile-pc-content] .works-showcase .project-subtitle{margin:0 0 16px;}
+ body[data-mobile-pc-content] .works-showcase .project-program-chip{font-size:14px;}
+ body[data-mobile-pc-content] .ds-swatches strong,body[data-mobile-pc-content] .ds-swatches small{font-size:14px;}
+ body[data-mobile-pc-content] .pair-pagination button{position:relative;}
+ body[data-mobile-pc-content] .pair-pagination button::after{content:"";position:absolute;inset:-14px -8px;}
+ body[data-mobile-pc-content] .ds-detail,body[data-mobile-pc-content] .ds-partner{min-height:48px;}
+ body[data-mobile-pc-content] .hotels-key-screens .ks-number{top:-88px;}
+}

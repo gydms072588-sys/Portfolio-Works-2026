@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">영상 재생과 타임라인 오브젝트</title>
+  <desc id="desc">재생 버튼이 반응하고 민트색 재생선과 재생 헤드가 왼쪽에서 오른쪽으로 이동하는 영상 오브젝트</desc>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .video-progress { animation: video-progress-move 5.2s linear infinite; stroke-dasharray: 144; }
+      .video-playhead { animation: video-playhead-move 5.2s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .video-play-icon { animation: video-play-react 5.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .video-level { animation: video-level-react 1.1s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center bottom; }
+      .video-level:nth-of-type(2) { animation-delay: -.35s; }
+      .video-level:nth-of-type(3) { animation-delay: -.7s; }
+      .video-level:nth-of-type(4) { animation-delay: -.2s; }
+    }
+    @keyframes video-progress-move {
+      0%, 8% { stroke-dashoffset: 144; }
+      88%, 100% { stroke-dashoffset: 0; }
+    }
+    @keyframes video-playhead-move {
+      0%, 8% { transform: translateX(0); }
+      88%, 100% { transform: translateX(131px); }
+    }
+    @keyframes video-play-react {
+      0%, 8%, 20%, 100% { transform: scale(1); }
+      13% { transform: scale(.9); }
+    }
+    @keyframes video-level-react {
+      from { transform: scaleY(.45); opacity: .55; }
+      to { transform: scaleY(1); opacity: 1; }
+    }
+  </style>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="86" r="42" stroke="#24394b" stroke-width="2"/>
+    <path class="video-play-icon" d="m56 69 25 17-25 17z" fill="#236fd4" stroke="#24394b" stroke-width="2"/>
+    <path d="M128 97h144" stroke="#536064" stroke-width="2"/>
+    <path class="video-progress" d="M128 97h144" stroke="#236fd4" stroke-width="2"/>
+    <path d="M128 89v16M272 89v16" stroke="#24394b" stroke-width="2"/>
+    <path d="M153 93v8M177 93v8M201 93v8M225 93v8M249 93v8" stroke="#7F8C90" stroke-width="2"/>
+    <rect class="video-playhead" x="128" y="90" width="13" height="13" fill="#f8fbff" stroke="#236fd4" stroke-width="2"/>
+    <path d="M128 122h19M253 122h19" stroke="#637383" stroke-width="2"/>
+    <path class="video-level" d="M128 60v-8" stroke="#236fd4" stroke-width="2"/>
+    <path class="video-level" d="M136 63V49" stroke="#236fd4" stroke-width="2"/>
+    <path class="video-level" d="M144 61v-10" stroke="#236fd4" stroke-width="2"/>
+    <path class="video-level" d="M152 64V48" stroke="#236fd4" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+/* Visual Design Cover 전용 블루 스케치 보드 */
+.uxui-cover[data-visual-board]{--board-blue:#155eef;--board-ink:#0b35ad;background-color:#f8fbff;background-image:linear-gradient(rgba(21,94,239,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(21,94,239,.055) 1px,transparent 1px);}
+.uxui-cover[data-visual-board] .uxui-cover-title{color:var(--board-ink);position:relative;z-index:2;}
+.uxui-cover[data-visual-board] .category-nav{z-index:3;}
+.uxui-cover[data-visual-board] .category-nav a{color:#5874a8;}.uxui-cover[data-visual-board] .category-nav a:hover,.uxui-cover[data-visual-board] .category-nav a[aria-current=page]{color:var(--board-blue);}
+.uxui-cover[data-visual-board] .skills-return{background:var(--board-ink);}
+.uxui-cover[data-visual-board] .opening-intro__scroll{color:var(--board-blue);z-index:3;}
+.visual-board-graphic{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden;}
+.visual-board-graphic .board-guide{stroke:#155eef;stroke-opacity:.22;fill:none;stroke-width:1;}
+.visual-board-graphic .board-frame{stroke:#155eef;stroke-opacity:.4;fill:none;stroke-width:1.2;}
+.visual-board-graphic .board-shape{stroke:#155eef;stroke-opacity:.4;stroke-width:1;}
+.visual-board-graphic .board-fill{fill:#b7d1ff;fill-opacity:.6;}
+.visual-board-graphic path,.visual-board-graphic rect,.visual-board-graphic circle{vector-effect:non-scaling-stroke;}
+
+.uxui-cover[data-visual-board] .opening-intro__scroll>span{border-color:rgba(21,94,239,.45);}

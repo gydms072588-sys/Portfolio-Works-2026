@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; color: #0b0b0d; background: #f9fcfd; font-family: Inter, Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif; }
+html.intro-active, body.intro-active { overflow: hidden; }
+button { font: inherit; }
+:focus-visible { outline: 3px solid #155eef; outline-offset: 4px; }
+.sr-only { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; border: 0; margin: -1px; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+
+/* Shared role tokens. No inherited body changes: original Opening is untouched. */
+:root {
+ --font-hero: clamp(40px, 3vw, 48px);
+ --font-page-title: clamp(32px, 2.5vw, 36px);
+ --font-section-title: clamp(22px, 1.7vw, 24px);
+ --font-content-title: clamp(18px, 1.4vw, 20px);
+ --font-body: 16px;
+ --font-secondary: 14px;
+ --font-caption: clamp(12px, .9vw, 13px);
+ --line-heading: 1.2;
+ --line-section: 1.3;
+ --line-body: 1.55;
+ --line-caption: 1.4;
+ --space-section: clamp(120px, 9vw, 160px);
+ --space-content: clamp(32px, 3vw, 48px);
+ --space-card: clamp(24px, 2vw, 32px);
+ --space-viewport: clamp(28px, 4dvh, 48px);
+}
+@media(max-width:767px) {
+ :root {
+  --font-hero: clamp(28px, 7.6vw, 34px);
+  --font-page-title: clamp(24px, 6.5vw, 28px);
+  --font-section-title: clamp(20px, 5.5vw, 22px);
+  --font-content-title: clamp(16px, 4.6vw, 18px);
+  --space-section: clamp(60px, 16vw, 80px);
+  --space-content: clamp(20px, 6vw, 32px);
+  --space-card: clamp(16px, 5vw, 24px);
+  --space-viewport: 24px;
+ }
+}
+
+/* Shared top-of-page visibility, preserving each button's layout space. */
+.return-scroll-control { opacity:0; visibility:hidden; pointer-events:none; transition:opacity 180ms ease,visibility 0s 180ms; }
+.return-scroll-control.is-at-top { opacity:1; visibility:visible; pointer-events:auto; transition-delay:0s; }
+.return-scroll-bounce { animation:return-scroll-bounce 420ms ease-out; }
+@keyframes return-scroll-bounce { 0% { transform:translateY(-12px); } 60% { transform:translateY(4px); } 82% { transform:translateY(-2px); } 100% { transform:translateY(0); } }
+@media(prefers-reduced-motion:reduce) { .return-scroll-control { transition:none; } .return-scroll-bounce { animation:none; } }
+
+/* Opacity preserves keyboard access while hover controls are hidden. */
+.return-scroll-control { visibility:visible; }

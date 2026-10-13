@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">반응형 웹 화면 오브젝트</title>
+  <desc id="desc">브라우저와 모바일 화면의 콘텐츠 선이 차례로 그려지는 반응형 웹 오브젝트</desc>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .web-copy { animation: web-copy-write 5.4s ease-in-out infinite; stroke-dasharray: 70; }
+      .web-copy.short { animation-delay: .18s; stroke-dasharray: 45; }
+      .web-phone { animation: web-phone-react 5.4s cubic-bezier(.2,.75,.2,1) infinite; transform-box: fill-box; transform-origin: center; }
+      .web-focus { animation: web-focus-pulse 5.4s ease-in-out infinite; }
+    }
+    @keyframes web-copy-write {
+      0%, 12% { opacity: 0; stroke-dashoffset: 70; }
+      28%, 82% { opacity: 1; stroke-dashoffset: 0; }
+      94%, 100% { opacity: .2; stroke-dashoffset: 0; }
+    }
+    @keyframes web-phone-react {
+      0%, 16%, 82%, 100% { transform: translate3d(0,0,0); }
+      28%, 48% { transform: translate3d(-4px,-3px,0); }
+    }
+    @keyframes web-focus-pulse {
+      0%, 18%, 68%, 100% { opacity: .55; }
+      34%, 52% { opacity: 1; }
+    }
+  </style>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="24" y="28" width="178" height="112" rx="7" stroke="#24394b" stroke-width="2"/>
+    <path d="M24 50h178" stroke="#24394b" stroke-width="2"/>
+    <circle cx="37" cy="39" r="3" stroke="#236fd4" stroke-width="2"/>
+    <circle cx="48" cy="39" r="3" stroke="#236fd4" stroke-width="2"/>
+    <circle cx="59" cy="39" r="3" stroke="#236fd4" stroke-width="2"/>
+    <rect class="web-focus" x="48" y="68" width="70" height="30" rx="3" stroke="#637383" stroke-width="2" stroke-dasharray="3 4"/>
+    <rect x="48" y="111" width="38" height="20" rx="2" stroke="#236fd4" stroke-width="2"/>
+    <path class="web-copy" d="M102 114h61" stroke="#24394b" stroke-width="2"/>
+    <path class="web-copy short" d="M102 124h42" stroke="#24394b" stroke-width="2"/>
+    <g class="web-phone">
+      <rect x="191" y="72" width="68" height="86" rx="9" fill="#f8fbff" stroke="#24394b" stroke-width="2"/>
+      <path d="M191 89h68" stroke="#24394b" stroke-width="2"/>
+      <path d="M217 80h16" stroke="#236fd4" stroke-width="2"/>
+      <rect x="207" y="103" width="37" height="18" rx="2" stroke="#236fd4" stroke-width="2"/>
+      <path class="web-copy" d="M207 133h37" stroke="#24394b" stroke-width="2"/>
+      <path class="web-copy short" d="M207 143h25" stroke="#24394b" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

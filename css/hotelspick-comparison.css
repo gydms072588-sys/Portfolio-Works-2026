@@ -1,0 +1,24 @@
+/* 07 기획서 기반 Before / After 동시 비교 */
+.uxui-editorial .hotels-pair-comparison{background:#000;color:#fff;min-height:100svh;padding:clamp(36px,5svh,64px) 0;display:flex;align-items:center;}
+.pair-inner{width:min(1500px,calc(100% - 96px));margin:auto;}
+.pair-header{margin-bottom:32px;}.pair-header h3{font-size:clamp(36px,3vw,54px);line-height:1.2;margin:0;}.pair-current{color:#83b5ff;font-size:16px;margin:14px 0 0;}
+.pair-slider{position:relative;}.pair-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;}
+.pair-figure{margin:0;min-width:0;}.pair-figure img{display:block;width:100%;height:auto;aspect-ratio:187/106;object-fit:contain;}.pair-figure h4{font-size:clamp(26px,2vw,32px);margin:20px 0 10px;}.pair-figure p{font-size:clamp(16px,1.1vw,18px);line-height:1.6;word-break:keep-all;margin:0;min-height:3.2em;}
+.pair-prev,.pair-next{position:absolute;top:calc((100% - 125px)/2);transform:translateY(-50%);width:36px;height:44px;background:transparent;color:#83b5ff;border:0;font-size:36px;cursor:pointer;}.pair-prev{left:-42px;}.pair-next{right:-42px;}
+.pair-pagination{display:flex;justify-content:center;gap:12px;margin-top:36px;}.pair-pagination button{width:12px;height:12px;border:0;border-radius:50%;padding:0;background:#666;cursor:pointer;}.pair-pagination button[aria-pressed=true]{background:#428bff;}.pair-pagination button:focus-visible,.pair-prev:focus-visible,.pair-next:focus-visible{outline:2px solid #83b5ff;outline-offset:6px;}
+@media(max-width:767px){.pair-inner{width:calc(100% - 48px);}.pair-images{grid-template-columns:1fr;gap:30px;}.pair-header{margin-bottom:24px;}.pair-header h3{font-size:34px;}.pair-prev{left:-24px;}.pair-next{right:-24px;}.pair-prev,.pair-next{width:24px;}.pair-figure h4{margin-top:16px;}.pair-pagination{margin-top:28px;}}
+
+/* Before 상태명만 연회색으로 구분 */
+.hotels-pair-comparison .pair-figure:first-child h4{color:#bfc4cc;}
+
+/* 비교 슬라이드 넘김 버튼: 아이콘과 클릭 영역 확대 */
+.hotels-pair-comparison .pair-prev,.hotels-pair-comparison .pair-next{width:56px;height:64px;font-size:56px;line-height:1;display:flex;align-items:center;justify-content:center;}
+.hotels-pair-comparison .pair-prev{left:-62px;}.hotels-pair-comparison .pair-next{right:-62px;}
+@media(min-width:768px){.hotels-pair-comparison .pair-inner{width:min(1500px,calc(100% - 144px));}}
+@media(max-width:767px){.hotels-pair-comparison .pair-prev,.hotels-pair-comparison .pair-next{width:44px;height:56px;font-size:44px;background:rgba(0,0,0,.65);border-radius:8px;z-index:2;}.hotels-pair-comparison .pair-prev{left:-16px;}.hotels-pair-comparison .pair-next{right:-16px;}}
+
+/* After의 개선 표현만 공통 브랜드 블루로 강조합니다. */
+.hotels-pair-comparison .pair-highlight{color:var(--blue);}
+
+/* 설명문은 강조 구절까지 흰색으로 통일하고 제목/After 라벨의 블루는 유지합니다. */
+.hotels-pair-comparison .pair-after-copy .pair-highlight{color:#fff;text-decoration:none;}

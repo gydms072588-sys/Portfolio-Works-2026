@@ -1,0 +1,31 @@
+/* HotelsPick 08: 개선 내용에서 기대효과로 연결하는 카드 */
+.uxui-editorial .hotels-outcome>.ed-inner{width:min(1500px,calc(100% - 64px));}
+.uxui-editorial .hotels-outcome{padding:48px 0;}
+.uxui-editorial .hotels-outcome h3{font-size:clamp(32px,3vw,52px);}
+.uxui-editorial .hotels-outcome .do-label{margin-bottom:18px;}
+.uxui-editorial .hotels-outcome .do-summary{margin-top:18px;}
+.uxui-editorial .hotels-outcome .do-grid{width:min(1200px,100%);margin:44px auto 36px;gap:24px;}
+.uxui-editorial .hotels-outcome .do-item{background:#16263d;border-radius:12px;min-height:280px;padding:30px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.hotels-outcome .do-icon{width:42px;height:42px;color:#83b5ff;flex-shrink:0;}
+.uxui-editorial .hotels-outcome .do-item h4{font-size:24px;margin:18px 0 14px;}
+.hotels-outcome .do-change{color:#c4cfde;font-size:17px;margin:0;word-break:keep-all;}
+.hotels-outcome .do-arrow{width:22px;height:22px;color:#83b5ff;margin:18px 0;flex-shrink:0;}
+.hotels-outcome .do-effect{color:#fff;font-size:20px;font-weight:600;margin:0;word-break:keep-all;}
+.hotels-outcome .do-experience{font-size:16px;line-height:1.6;color:#c4cfde;margin:0 auto 14px;word-break:keep-all;}
+.uxui-editorial .hotels-outcome .do-note{margin-bottom:24px;}
+.hotels-outcome.has-outcome-motion .do-reveal{opacity:0;transform:translateY(12px);transition:opacity 450ms ease-out,transform 450ms ease-out;transition-delay:var(--do-delay);}
+.hotels-outcome.has-outcome-motion.is-outcome-visible .do-reveal{opacity:1;transform:none;}
+@media(min-width:768px) and (max-height:800px){.uxui-editorial .hotels-outcome{padding:36px 0;}.uxui-editorial .hotels-outcome .do-grid{margin:30px auto 26px;}.uxui-editorial .hotels-outcome .do-item{min-height:260px;padding:24px 16px;}}
+@media(max-width:767px){.uxui-editorial .hotels-outcome>.ed-inner{width:calc(100% - 40px);}.uxui-editorial .hotels-outcome .do-grid{grid-template-columns:1fr;gap:18px;}.uxui-editorial .hotels-outcome h3{font-size:32px;}.hotels-outcome .do-experience{font-size:15px;}}
+@media(prefers-reduced-motion:reduce){.hotels-outcome .do-reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+/* 제목과 카드만 남긴 중앙 구성 */
+.uxui-editorial .hotels-outcome .do-grid{margin:clamp(40px,5svh,60px) auto 0;}
+.uxui-editorial .hotels-outcome .do-item{min-height:310px;}
+.hotels-outcome .do-arrow{width:36px;height:36px;margin:20px 0;}
+@media(min-width:768px) and (max-height:800px){.uxui-editorial .hotels-outcome .do-item{min-height:290px;}}
+@media(max-width:767px){.uxui-editorial .hotels-outcome .do-item{min-height:300px;}}
+
+/* 카드 하단 기대효과 강조 */
+.hotels-outcome .do-effect{font-size:clamp(23px,1.5vw,28px);font-weight:700;line-height:1.4;}
+@media(max-width:767px){.hotels-outcome .do-effect{font-size:24px;}}

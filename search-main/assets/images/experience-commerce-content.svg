@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">상품 콘텐츠 편집 오브젝트</title>
+  <desc id="desc">마우스 포인터가 이미지 선택 영역으로 이동하고 상품 카드가 반응하는 콘텐츠 편집 오브젝트</desc>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .commerce-pointer { animation: commerce-pointer-move 4.8s cubic-bezier(.4,0,.2,1) infinite; transform-box: fill-box; transform-origin: 0 0; }
+      .commerce-selection { animation: commerce-selection-react 4.8s ease-in-out infinite; }
+      .commerce-accent { animation: commerce-accent-write 4.8s ease-in-out infinite; stroke-dasharray: 65; }
+      .commerce-card { animation: commerce-card-react 4.8s cubic-bezier(.2,.75,.2,1) infinite; transform-box: fill-box; transform-origin: center; }
+    }
+    @keyframes commerce-pointer-move {
+      0%, 12%, 100% { transform: translate3d(18px,12px,0); }
+      38%, 62% { transform: translate3d(-3px,-13px,0); }
+      48% { transform: translate3d(-3px,-13px,0) scale(.9); }
+      76% { transform: translate3d(6px,2px,0); }
+    }
+    @keyframes commerce-selection-react {
+      0%, 26%, 72%, 100% { opacity: .62; }
+      40%, 60% { opacity: 1; stroke: #236fd4; }
+    }
+    @keyframes commerce-accent-write {
+      0%, 15% { stroke-dashoffset: 65; }
+      36%, 80% { stroke-dashoffset: 0; }
+      96%, 100% { stroke-dashoffset: 65; }
+    }
+    @keyframes commerce-card-react {
+      0%, 24%, 70%, 100% { transform: translate3d(0,0,0); }
+      38%, 56% { transform: translate3d(0,-3px,0); }
+    }
+  </style>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g class="commerce-card">
+      <rect x="24" y="34" width="168" height="102" rx="7" stroke="#24394b" stroke-width="2"/>
+      <path d="M44 55h128" stroke="#637383" stroke-width="2"/>
+      <path d="M61 73h30l4 34H57z" fill="#F2AE92" stroke="#24394b" stroke-width="2"/>
+      <path d="M66 73v-7a10 10 0 0 1 20 0v7" stroke="#24394b" stroke-width="2"/>
+      <path d="M112 78h54M112 92h42" stroke="#24394b" stroke-width="2"/>
+      <path class="commerce-accent" d="M44 119h65" stroke="#236fd4" stroke-width="2"/>
+    </g>
+    <rect class="commerce-selection" x="210" y="68" width="58" height="52" rx="2" stroke="#24394b" stroke-width="2" stroke-dasharray="4 4"/>
+    <circle cx="247" cy="85" r="6" stroke="#236fd4" stroke-width="2"/>
+    <path d="m214 115 15-17 12 11 8-7 15 13" stroke="#637383" stroke-width="2"/>
+    <g class="commerce-pointer">
+      <path d="M245 122v36l10-10 9 17 9-5-9-16h15z" fill="#f8fbff" stroke="#24394b" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

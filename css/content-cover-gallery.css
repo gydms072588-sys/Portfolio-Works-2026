@@ -1,0 +1,36 @@
+/* Content Design Cover 전용. 다른 커버/섹션에는 영향을 주지 않습니다. */
+.uxui-cover[data-content-gallery]{background:#080b10;background-image:none;height:100svh;min-height:100svh;overflow:clip;isolation:isolate;}
+.uxui-cover[data-content-gallery]::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,rgba(8,11,16,.75) 0%,rgba(8,11,16,.5) 26%,rgba(8,11,16,.08) 66%),linear-gradient(180deg,#080b10 0%,transparent 28%,transparent 70%,#080b10 100%);}
+.uxui-cover[data-content-gallery] .uxui-cover-title{color:#fff;position:relative;z-index:3;pointer-events:none;text-shadow:0 2px 30px #080b10;}
+.uxui-cover[data-content-gallery] .category-nav{z-index:4;}.uxui-cover[data-content-gallery] .category-nav a{color:#bac5d8;}.uxui-cover[data-content-gallery] .category-nav a:hover,.uxui-cover[data-content-gallery] .category-nav a[aria-current=page]{color:#6ba1ff;}
+.uxui-cover[data-content-gallery] .works-home-control{z-index:5;}.uxui-cover[data-content-gallery] .skills-return{background:#223959;}
+.uxui-cover[data-content-gallery] .opening-intro__scroll{z-index:4;color:#83b5ff;}
+/* 가로 흐름과 수직 상승을 분리합니다. 모든 패널의 각도/기준선은 같습니다. */
+.content-gallery-scene{position:absolute;inset:auto 0 145px;height:400px;z-index:1;opacity:0;transition:opacity 700ms ease-out;}
+.uxui-cover.gallery-ready .content-gallery-scene{opacity:1;}
+.content-gallery-track{display:flex;width:max-content;animation:content-gallery-flow 78s linear infinite;will-change:transform;}
+.content-gallery-group{display:flex;align-items:center;gap:0;padding:0;flex-shrink:0;}
+.content-gallery-card{position:relative;width:280px;height:400px;margin-right:28px;flex-shrink:0;z-index:1;}
+.content-popup-window{width:100%;height:100%;border:0;border-radius:3px;background:transparent;overflow:hidden;transform:translateY(0) perspective(1143px) rotateY(-18deg);transition:transform 400ms cubic-bezier(.23,1,.32,1);backface-visibility:hidden;}
+.content-popup-body{width:100%;height:100%;padding:0;overflow:hidden;background:transparent;}
+.content-popup-body img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;}
+@media(hover:hover) and (pointer:fine){
+.content-gallery-scene:has(.content-gallery-card:hover) .content-gallery-track{animation-play-state:paused;}
+.content-gallery-group:has(.content-gallery-card:hover){position:relative;z-index:4;}
+.content-gallery-card:hover{z-index:10;}
+.content-gallery-card:hover .content-popup-window{transform:translateY(-100px) perspective(1143px) rotateY(-18deg);}
+}
+@keyframes content-gallery-flow{to{transform:translateX(-50%);}}
+@media(max-width:767px){
+.content-gallery-scene{bottom:140px;height:300px;}
+.content-gallery-card{width:210px;height:300px;margin-right:20px;}
+.content-gallery-track{animation-duration:62s;}
+}
+@media(max-height:600px){.content-gallery-scene{bottom:95px;height:220px;}.content-gallery-card{width:176px;height:220px;}}
+@media(prefers-reduced-motion:reduce){.content-gallery-track{animation:none;will-change:auto;}.content-gallery-scene,.content-popup-window{transition:none;}.content-gallery-card:hover .content-popup-window{transform:perspective(1143px) rotateY(-18deg);}}
+
+/* 세로 상세 이미지는 첫 화면부터 보여주며 패널 크기에 영향을 주지 않습니다. */
+.content-gallery-card.is-detail .content-popup-body img{object-position:center top;}
+
+/* 두 줄 제목의 실제 중심에 갤러리 중심을 맞춥니다. */
+.uxui-cover[data-content-gallery] .content-gallery-scene{top:var(--content-gallery-center,50%);bottom:auto;transform:translateY(-50%);}

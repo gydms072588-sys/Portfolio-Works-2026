@@ -1,0 +1,10 @@
+/* Cover 전체 제목 선택. 배경·타이틀 크기·메뉴 배치를 유지합니다. */
+.uxui-cover{background-color:#fff;background-image:linear-gradient(rgba(38,114,217,.085) 1px,transparent 1px),linear-gradient(90deg,rgba(38,114,217,.085) 1px,transparent 1px);background-size:32px 32px;}
+.uxui-cover .uxui-cover-selection{border-color:transparent;}
+.uxui-cover .uxui-cover-selection>.uxui-cover-handle,.uxui-cover .uxui-cover-selection>.uxui-cover-cursor{display:none;}
+.uxui-cover .opening-intro__scroll{transition:opacity 450ms ease-out;}
+.uxui-cover[data-workspace-pending] .opening-intro__scroll,.uxui-cover.workspace-running .opening-intro__scroll{opacity:0;transition:none;}
+.workspace-marquee{position:absolute;z-index:4;pointer-events:none;border:1px solid #2672d9;background:rgba(38,114,217,.065);box-sizing:border-box;}
+.uxui-cover .workspace-cursor{position:absolute;z-index:5;right:auto;bottom:auto;pointer-events:none;}
+@media(max-width:767px){.uxui-cover{background-size:24px 24px;}.uxui-cover .workspace-cursor{width:18px;height:24px;}}
+@media(prefers-reduced-motion:reduce){.uxui-cover .opening-intro__scroll{transition:none;}}

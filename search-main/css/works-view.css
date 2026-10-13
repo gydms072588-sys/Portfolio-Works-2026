@@ -1,0 +1,41 @@
+
+/* Opening visual classes are reused; its animation and stylesheet are untouched. */
+.search-main__heading, .search-suggestions { transition:opacity 220ms ease; }
+.search-main.is-works-leaving .search-main__heading, .search-main.is-works-leaving .search-suggestions { opacity:0; }
+.search-main.is-works { display:block; padding:clamp(40px,8dvh,80px) 28px 90px; }
+.works-view { width:100%; min-width:0; }
+.works-search-slot { width:min(100%,680px); margin:0 auto; }
+.works-categories { display:grid; align-items:center; min-height:calc(100dvh - 240px); }
+.works-category-grid { display:grid; grid-template-columns:repeat(4,minmax(180px,240px)); justify-content:center; gap:24px; width:min(100%,1032px); margin:48px auto; }
+.search-main .works-category { border:0; padding:0; cursor:pointer; opacity:0; transform:translateY(12px); transition:opacity 320ms ease,transform 320ms ease; }
+.works-category.is-visible { opacity:1; transform:none; }
+.works-category[aria-pressed="true"] { outline:3px solid #236fd4; outline-offset:7px; }
+.search-suggestions button[data-destination="works"] { cursor:pointer; }
+@media(max-width:900px) {
+ .search-main.is-works { padding:32px 24px 90px; }
+ .works-category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); width:min(100%,440px); gap:22px; margin-block:44px; }
+ .works-categories { min-height:calc(100dvh - 200px); }
+}
+@media(prefers-reduced-motion:reduce) { .search-main__heading, .search-suggestions, .search-main .works-category { transition:none; } }
+
+.search-main.is-works { width:100%; }
+.search-main.is-works .hero-search { position:relative; display:grid; place-items:center; width:40px; min-height:60px; gap:0; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; margin-inline:auto; }
+.search-main.is-works .hero-search input, .search-main.is-works .hero-search .search-plus, .search-main.is-works .hero-search label { display:none; }
+.search-main.is-works .search-submit { position:relative; cursor:pointer; }
+.search-main.is-works .search-submit::before { content:''; position:absolute; inset:-3px; border-radius:50%; }
+.works-return-tooltip { display:none; }
+.search-main.is-works .works-return-tooltip { display:block; position:absolute; top:calc(100% + 5px); left:50%; transform:translateX(-50%); white-space:nowrap; padding:6px 10px; border-radius:6px; background:#17212b; color:#fff; font-size:12px; line-height:1.4; opacity:0; visibility:hidden; pointer-events:none; }
+.search-main.is-works .hero-search:has(.search-submit:hover) .works-return-tooltip,
+.search-main.is-works .hero-search:has(.search-submit:focus-visible) .works-return-tooltip { opacity:1; visibility:visible; }
+
+/* Shadows and spreading are scoped to Works, never Opening. */
+.search-main .works-category { box-shadow:0 6px 18px rgba(15,35,55,.06); }
+.works-category-grid.is-spreading .works-category { box-shadow:none; transition:none; transform:none; }
+
+.works-category-grid .opening-card__label { transition:opacity 200ms ease; }
+.works-category-grid.is-spreading .opening-card__label { opacity:0; transition:none; }
+@media(prefers-reduced-motion:reduce) { .works-category-grid .opening-card__label { transition:none; } }
+
+/* Works 도형 3개를 중앙 배치. Opening/Profile/Skills에는 적용하지 않습니다. */
+@media(min-width:901px){.works-category-grid{grid-template-columns:repeat(var(--visible-categories,4),minmax(180px,240px));width:min(100%,calc(var(--visible-categories,4)*240px + (var(--visible-categories,4) - 1)*24px));}}
+@media(max-width:900px){.works-category-grid[data-visible-count="3"]>.works-category:last-child{grid-column:1/-1;justify-self:center;width:calc((100% - 22px)/2);}}

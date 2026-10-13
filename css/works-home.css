@@ -1,0 +1,21 @@
+/* Original Profile/Skills home styles and motion. */
+.skills-return-wrapper { position:relative; width:40px; height:40px; margin:0 auto 28px; }
+.skills-return { display:grid; place-items:center; width:40px; height:40px; border:0; border-radius:50%; background:#17212b; color:#fff; cursor:pointer; }
+.skills-return::before { content:''; position:absolute; inset:-3px; border-radius:50%; }
+#works-return-tooltip { position:absolute; top:calc(100% + 6px); left:50%; transform:translateX(-50%); white-space:nowrap; background:#17212b; color:#fff; border-radius:6px; padding:6px 10px; font-size:12px; opacity:0; visibility:hidden; pointer-events:none; }
+.skills-return-wrapper:has(button:hover) #works-return-tooltip,.skills-return-wrapper:has(button:focus-visible) #works-return-tooltip { opacity:1;visibility:visible; }
+
+.return-scroll-control { opacity:0; visibility:hidden; pointer-events:none; transition:opacity 180ms ease,visibility 0s 180ms; }
+.return-scroll-control.is-at-top { opacity:1; visibility:visible; pointer-events:auto; transition-delay:0s; }
+.return-scroll-bounce { animation:return-scroll-bounce 420ms ease-out; }
+@keyframes return-scroll-bounce { 0% { transform:translateY(-12px); } 60% { transform:translateY(4px); } 82% { transform:translateY(-2px); } 100% { transform:translateY(0); } }
+@media(prefers-reduced-motion:reduce) { .return-scroll-control { transition:none; } .return-scroll-bounce { animation:none; } }
+
+/* Opacity preserves keyboard access while hover controls are hidden. */
+.return-scroll-control { visibility:visible; }
+.works-home-control.skills-return-wrapper{position:fixed;left:50%;top:16px;transform:translateX(-50%);margin:0;z-index:30;}
+.works-home-control .skills-return .material-symbol{display:block;width:20px;height:20px;flex:0 0 20px;color:#fff;background:currentColor;mask:url('../assets/navigation/arrow_upward.svg') center/contain no-repeat;-webkit-mask:url('../assets/navigation/arrow_upward.svg') center/contain no-repeat;opacity:1;visibility:visible;}
+
+/* Full-width hover is observed without an overlay intercepting other controls. */
+.works-home-control.skills-return-wrapper{position:absolute;}
+@media(hover:none),(pointer:coarse){.works-home-control.return-scroll-control{opacity:1;pointer-events:auto;}}

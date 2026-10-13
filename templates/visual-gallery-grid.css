@@ -1,0 +1,30 @@
+/* Visual 전용 연속 갤러리. UX/UI / Content 스타일과 분리합니다. */
+.visual-gallery-page{background:#f8f9fc;color:#17212b;}
+.visual-gallery-page main{position:relative;max-width:1500px;width:calc(100% - 96px);margin:auto;}
+.vg-header{padding:96px 0 48px;position:relative;}
+.visual-gallery-page .category-nav{position:static;display:flex;justify-content:center;flex-wrap:wrap;gap:24px;width:100%;margin:0 0 64px;padding:0;}
+.visual-gallery-page .category-nav a{font-size:14px;text-decoration:none;color:#637383;min-height:44px;display:flex;align-items:center;}
+.visual-gallery-page .category-nav a[aria-current=page],.visual-gallery-page .category-nav a:hover{color:#236fd4;}
+.visual-gallery-page .category-nav a[aria-current=page]{font-weight:700;}
+.visual-gallery-page .vg-header h1{font-size:clamp(48px,5.4vw,88px);font-weight:800;color:#236fd4;line-height:1.05;letter-spacing:-.04em;margin:0;}
+.visual-gallery-page .works-home-control{top:24px;}
+.vg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:64px 48px;padding:0 0 100px;align-items:start;}
+.vg-work{min-width:0;margin:0;}.vg-work:nth-child(3n+2){margin-top:72px;}.vg-work:nth-child(3n){margin-top:28px;}
+.vg-image-button{position:relative;display:block;background:transparent;width:100%;padding:0;border:0;text-align:left;cursor:zoom-in;}
+.vg-image-button:disabled{cursor:default;}
+.vg-image-button img{display:block;width:100%;height:auto;transition:filter 250ms ease,transform 300ms ease;}
+.vg-placeholder{display:flex;align-items:center;justify-content:center;aspect-ratio:var(--ratio);background:#e9edf3;color:#8895a9;font-size:14px;}
+.vg-caption{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-top:14px;}
+.vg-caption h2{font-size:18px;font-weight:600;margin:0;line-height:1.3;word-break:keep-all;}.vg-caption p{font-size:13px;color:#637383;margin:0;}
+.vg-work.is-placeholder .vg-caption h2{color:#8b97a8;font-size:15px;font-weight:400;}
+@media(hover:hover){.vg-work:not(.is-placeholder):hover .vg-image-button img{filter:brightness(.95);transform:translateY(-4px);}.vg-work:not(.is-placeholder):hover h2{color:#236fd4;}}
+.vg-viewer{width:min(1080px,calc(100% - 40px));max-height:90svh;border:0;padding:32px;background:#fff;color:#17212b;border-radius:8px;overflow:auto;}
+.vg-viewer::backdrop{background:rgba(11,22,38,.72);}.vg-close{position:sticky;top:0;display:block;margin:0 0 20px auto;min-height:44px;padding:10px 16px;border:0;background:#f0f4fa;color:#236fd4;cursor:pointer;z-index:1;}
+.vg-viewer h2{font-size:28px;margin:0 0 12px;}.vg-viewer p{line-height:1.6;margin:0 0 18px;color:#637383;}.vg-detail-images{display:grid;gap:24px;}.vg-detail-images img{width:100%;height:auto;}
+.vg-reveal{opacity:0;}.vg-noscript{padding:24px;}
+@media(max-width:1000px){.vg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;}.vg-work:nth-child(n){margin-top:0;}.vg-work:nth-child(even){margin-top:48px;}}
+@media(max-width:600px){.visual-gallery-page main{width:calc(100% - 40px);}.vg-header{padding:88px 0 32px;}.visual-gallery-page .category-nav{gap:14px;margin-bottom:36px;}.visual-gallery-page .category-nav a{font-size:12px;}.visual-gallery-page .vg-header h1{font-size:48px;}.vg-grid{gap:36px 18px;padding-bottom:60px;}.vg-work:nth-child(even){margin-top:28px;}.vg-placeholder{font-size:12px;}.vg-caption{display:block;padding-top:10px;}.vg-caption h2{font-size:15px;}.vg-caption p{margin-top:6px;font-size:12px;}.vg-viewer{padding:20px;}.vg-viewer h2{font-size:24px;}}
+@media(prefers-reduced-motion:reduce){.vg-reveal{opacity:1;}.vg-image-button img{transition:none;}}
+
+/* 숨김 설정이 flex 링크 스타일보다 우선합니다. */
+.visual-gallery-page .category-nav a[hidden]{display:none;}

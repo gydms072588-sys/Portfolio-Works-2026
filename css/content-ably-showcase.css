@@ -1,0 +1,15 @@
+/* Content Design Project Showcase의 프로젝트 선택만 표시합니다. */
+body[data-category=content-design] .hotelspick-showcase .project-category-controls{display:flex;}
+body[data-category=content-design] #project-showcase-1 .project-summary-text{font-size:clamp(14px,.9vw,16px);}
+@media(max-width:767px){body[data-category=content-design] .hotelspick-showcase .project-category-nav{gap:8px;}body[data-category=content-design] .hotelspick-showcase .project-category-nav-name{font-size:11px;}}
+@media(max-width:767px){
+ body[data-category=content-design] .hotelspick-showcase .project-category-controls{position:static;transform:none;width:100%;padding:16px 20px 28px;}
+ body[data-category=content-design] .hotelspick-showcase .project-category-nav{display:flex;}
+ body[data-category=content-design] .hotelspick-showcase .project-category-nav-item{min-height:44px;}
+}
+/* ABLY 첫 Showcase만 영상 배경으로 변경 */
+body[data-category=content-design] .hotelspick-showcase #project-showcase-1{background:#11121a;}
+body[data-category=content-design] .hotelspick-showcase #project-showcase-1>.project-card-background{background:none;opacity:1;pointer-events:none;}
+body[data-category=content-design] .hotelspick-showcase #project-showcase-1>.project-card-background:after{display:block;content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,8,18,.42),rgba(5,8,18,.77));}
+.ably-showcase-background-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+@media(max-width:767px){body[data-category=content-design] .hotelspick-showcase #project-showcase-1>.project-card-background:after{background:rgba(5,8,18,.68);}}
