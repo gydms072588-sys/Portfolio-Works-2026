@@ -2,7 +2,7 @@
  globalThis.ProfileComparison={mount(root){
   if(!root)return()=>{};
   const tabs=root.querySelector('.qa-comparison-tabs'),panel=root.querySelector('.qa-comparison-panel'),cta=root.querySelector('.qa-compare-cta');
-  let selected=0,animation=null,selectionObserver=null,selectionTimer=null;
+  let animation=null;
   const buttons=[];
   const action=root.querySelector('.qa-compare-action');
   action.querySelector('p')?.remove();
@@ -21,7 +21,7 @@
   }
   panel.addEventListener('click',event=>{const preview=event.target.closest('.qa-detail-preview');if(preview&&panel.contains(preview))openViewer(preview);});
   function select(index,animate=true){
-   closeViewer();selected=index;const data=ProfileComparisons[index];animation?.cancel();
+   closeViewer();const data=ProfileComparisons[index];animation?.cancel();
    panel.replaceChildren();
    const template=data.templateId&&document.getElementById(data.templateId);
    if(template){
@@ -64,13 +64,6 @@
    buttons.push(button);tabs.append(button);
   });
   select(0,false);
-  cta.addEventListener('click',()=>{
-   const id=ProfileComparisons[selected].categoryId;
-   selectionObserver?.disconnect();clearTimeout(selectionTimer);
-   function pick(){if(location.hash!=='#works'){selectionObserver?.disconnect();return;}const grid=document.querySelector('.works-category-grid');const button=grid?.querySelector('[data-category-id="'+id+'"]');if(button&&!grid.inert&&button.classList.contains('is-visible')){selectionObserver?.disconnect();clearTimeout(selectionTimer);button.click();}}
-   selectionObserver=new MutationObserver(pick);selectionObserver.observe(document.querySelector('.works-category-grid'),{subtree:true,attributes:true,attributeFilter:['class','inert']});
-   setTimeout(pick,0);selectionTimer=setTimeout(()=>selectionObserver?.disconnect(),8000);
-  });
-  return()=>{closeViewer();animation?.cancel();selectionObserver?.disconnect();clearTimeout(selectionTimer);};
+  return()=>{closeViewer();animation?.cancel();};
  }};
 })();

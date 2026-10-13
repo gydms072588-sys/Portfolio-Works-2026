@@ -2,12 +2,14 @@
 globalThis.ProfileComparisons = [
  {id:'ux-ui',label:'UX/UI',templateId:'qa-compare-ux-content',categoryId:'ux-ui',cta:'UX/UI 포트폴리오 보기 →'},
  {id:'content-design',label:'콘텐츠 디자인',templateId:'qa-compare-content-design',categoryId:'design',cta:'콘텐츠 디자인 포트폴리오 보기 →'},
- {id:'visual-design',label:'비주얼 디자인',templateId:'qa-compare-visual-design',categoryId:'design',cta:'비주얼 디자인 포트폴리오 보기 →'}
+ {id:'visual-design',label:'비주얼 디자인',templateId:'qa-compare-visual-design',categoryId:'indesign',cta:'비주얼 디자인 포트폴리오 보기 →'}
 ];
 
 // Preserve verified assets and copy from the existing templates as editable tab data.
 ProfileComparisons.forEach(data=>{
- data.ctaHref='#works';
+ // 비교 버튼은 카테고리 선택 화면을 거치지 않고 해당 작업물 페이지로 연결합니다.
+ const pages={'ux-ui':'uxui.html','content-design':'content-design.html','visual-design':'visual-design.html'};
+ data.ctaHref=new URL(pages[data.id],globalThis.PortfolioWorksBase||new URL('./',location.href)).href;
  const figures=document.getElementById(data.templateId)?.content.querySelectorAll('.qa-compare-item');
  ['before','after'].forEach((key,index)=>{
   const figure=figures?.[index];if(!figure){data[key]=null;return;}
