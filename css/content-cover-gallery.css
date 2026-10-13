@@ -8,7 +8,7 @@
 /* 가로 흐름과 수직 상승을 분리합니다. 모든 패널의 각도/기준선은 같습니다. */
 .content-gallery-scene{position:absolute;inset:auto 0 145px;height:400px;z-index:1;opacity:0;transition:opacity 700ms ease-out;}
 .uxui-cover.gallery-ready .content-gallery-scene{opacity:1;}
-.content-gallery-track{display:flex;width:max-content;animation:content-gallery-flow 78s linear infinite;will-change:transform;}
+.content-gallery-track{display:flex;width:max-content;animation:content-gallery-flow var(--content-gallery-duration,78s) linear infinite;will-change:transform;}
 .content-gallery-group{display:flex;align-items:center;gap:0;padding:0;flex-shrink:0;}
 .content-gallery-card{position:relative;width:280px;height:400px;margin-right:28px;flex-shrink:0;z-index:1;}
 .content-popup-window{width:100%;height:100%;border:0;border-radius:3px;background:transparent;overflow:hidden;transform:translateY(0) perspective(1143px) rotateY(-18deg);transition:transform 400ms cubic-bezier(.23,1,.32,1);backface-visibility:hidden;}
@@ -24,7 +24,7 @@
 @media(max-width:767px){
 .content-gallery-scene{bottom:140px;height:300px;}
 .content-gallery-card{width:210px;height:300px;margin-right:20px;}
-.content-gallery-track{animation-duration:62s;}
+.content-gallery-track{animation-duration:var(--content-gallery-mobile-duration,62s);}
 }
 @media(max-height:600px){.content-gallery-scene{bottom:95px;height:220px;}.content-gallery-card{width:176px;height:220px;}}
 @media(prefers-reduced-motion:reduce){.content-gallery-track{animation:none;will-change:auto;}.content-gallery-scene,.content-popup-window{transition:none;}.content-gallery-card:hover .content-popup-window{transform:perspective(1143px) rotateY(-18deg);}}

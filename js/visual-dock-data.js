@@ -1,3 +1,3 @@
 export const visualDockSettings={galleryUrl:'https://gydms072588-sys.github.io/Portfolio-Gallery_2026/index.html',email:'gydms1413@naver.com',phone:'010-4914-1413',phoneHref:'tel:01049141413'};
 export const visualDockItems=[{id:'tools',label:'디자인 도구 묶음',icon:'tools'},{id:'onboarding',label:'온보딩',icon:'notice'},{id:'gallery',label:'포트폴리오 갤러리',icon:'gallery'},{id:'mail',label:'메일',icon:'mail'},{id:'contact',label:'연락처',icon:'phone'}];
-export const visualTools=[{label:'Adobe Photoshop',image:'./search-main/assets/icons/tools/photoshop.svg'},{label:'Adobe Illustrator',image:'./search-main/assets/icons/tools/illustrator.svg'},{label:'Adobe After Effects',image:''}];
+export const visualTools=[{label:'Adobe Photoshop',image:'./search-main/assets/icons/tools/photoshop.svg'},{label:'Adobe Illustrator',image:'./search-main/assets/icons/tools/illustrator.svg'},{label:'Figma',image:'./search-main/assets/icons/tools/figma.svg'}];

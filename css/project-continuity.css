@@ -1,0 +1,41 @@
+/* Only the four project detail pages load this stylesheet. */
+.project-bridge,.project-contact-bridge,.works-contact{--continuity-accent:#478cff;position:relative;background:#0d1016;color:#fff;text-align:center;box-sizing:border-box;width:100%;}
+body[data-category="content-design"] .project-bridge,body[data-category="content-design"] .project-contact-bridge,body[data-category="content-design"] .works-contact{--continuity-accent:#ff4f87;}
+.project-bridge{min-height:160svh;display:flex;align-items:center;justify-content:center;padding:80px 24px;}
+.project-bridge p,.works-contact-eyebrow{color:var(--continuity-accent);letter-spacing:.13em;font-size:14px;font-weight:700;}
+.project-bridge h2{font-size:clamp(36px,5vw,72px);margin:24px 0 48px;}
+.project-bridge a,.project-contact-bridge a{color:inherit;text-decoration:none;font-size:13px;letter-spacing:.1em;display:flex;align-items:center;flex-direction:column;gap:24px;}
+.project-bridge svg,.project-contact-bridge svg{width:32px;height:32px;color:var(--continuity-accent);}
+.project-bridge-end{position:absolute;bottom:0;height:1px;width:1px;}
+.project-contact-bridge{padding:88px 24px;}
+.works-contact{min-height:100svh;display:grid;place-items:center;padding:100px 24px;}
+.works-contact-inner{width:min(100%,1000px);}
+.works-contact h2{font-size:clamp(28px,3.2vw,48px);line-height:1.4;margin:28px 0;word-break:keep-all;}
+.works-contact-inner>p:not(.works-contact-eyebrow){font-size:16px;line-height:1.9;color:#bfc5cf;}
+.works-contact-details{display:flex;justify-content:center;gap:72px;margin:52px 0 0;}
+.works-contact-details>div{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.works-contact-details span{font-size:12px;letter-spacing:.12em;color:var(--continuity-accent);}
+.works-contact-details>div>div{display:flex;align-items:center;gap:8px;}
+.works-contact-details a{color:#fff;font-size:clamp(18px,2vw,24px);text-decoration:none;min-height:44px;display:flex;align-items:center;}
+.contact-copy{display:grid;place-items:center;width:44px;height:44px;border:1px solid #424956;border-radius:10px;color:#fff;background:transparent;cursor:pointer;}
+.contact-copy svg{width:20px;height:20px;}
+.contact-copy-status{min-height:30px;margin:14px 0;}
+.works-contact-home{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;color:#fff;border:1px solid #424956;border-radius:999px;text-decoration:none;}
+.works-contact a:focus-visible,.works-contact button:focus-visible,.project-bridge a:focus-visible{outline:2px solid var(--continuity-accent);outline-offset:5px;}
+@media(max-width:767px){.works-contact-details{flex-direction:column;gap:28px;margin-top:36px;}.works-contact{padding:80px 24px;}.project-bridge{min-height:160svh;}}
+
+/* Last screen only: natural height when content exceeds a short viewport. */
+.works-contact{min-height:100vh;min-height:100svh;padding:64px 32px;}
+.works-contact-inner{width:min(100%,1100px);display:flex;flex-direction:column;align-items:center;}
+.works-contact-inner>.works-contact-eyebrow{margin:0 0 24px;}
+.works-contact h2{font-size:clamp(36px,3vw,44px);line-height:1.45;margin:0 0 28px;letter-spacing:-.025em;}
+.works-contact-inner>p:not(.works-contact-eyebrow){font-size:18px;line-height:1.75;margin:0;}
+.works-contact-details{gap:100px;margin:52px 0 44px;}
+.works-contact-details>div{gap:14px;}
+.works-contact-details span{font-size:13px;line-height:1.5;}
+.works-contact-details a{font-size:20px;line-height:1.6;letter-spacing:0;}
+.works-contact-home{min-height:54px;padding:0 32px;font-size:16px;}
+.contact-copy-text{min-height:44px;padding:0 10px;border:0;background:transparent;color:#bbcce3;font-size:13px;cursor:pointer;}
+.contact-copy-feedback{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+@media(max-width:767px){.works-contact{padding:40px 24px;}.works-contact h2{font-size:28px;}.works-contact-inner>p:not(.works-contact-eyebrow){font-size:15px;line-height:1.75;}.works-contact-details{gap:28px;margin:48px 0 40px;}.works-contact-details a{font-size:19px;}.works-contact-details>div>div{gap:6px;}.works-contact-home{min-height:54px;}}
+body[data-category="content-design"] .works-contact{--continuity-accent:#478cff;}

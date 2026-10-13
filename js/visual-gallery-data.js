@@ -37,3 +37,11 @@ export const visibleVisualFiles=[
  {id:'slot-04',kind:'video',label:'영상 파일 01'},
  {id:'slot-05',kind:'video',label:'영상 파일 02'}
 ];
+
+// 갤러리 실제 작품 정보. 도구는 각 프로젝트의 js/projects.js에서 개별 확인했습니다.
+const media='./assets/images/visual-projects/';
+Object.assign(visualWorks[0],{title:'Business Card Design',type:'Client Work',tools:['Illustrator','Photoshop'],description:'의뢰 내용을 반영해 정보 배치와 시각적 인상을 정리한 명함 디자인',result:'최종 디자인 전달 후 의뢰인 측에서 실제 인쇄 진행',image:media+'editorial-business-card-list.jpg',detailImages:[{src:media+'editorial-business-card-final-front.jpg',label:'앞면 · 최종 시안'},{src:media+'editorial-business-card-final-back.jpg',label:'뒷면 · 최종 시안'}],sourceId:'editorial-business-card'});
+Object.assign(visualWorks[1],{title:'OGQ 스티커 콘텐츠',type:'Personal Project',tools:['Illustrator','Photoshop'],description:'일상에서 자주 사용하는 감정과 상황을 캐릭터의 표정과 동작으로 표현한 OGQ 네이버 스티커 콘텐츠입니다.',image:media+'ogq-stickers-main.jpg',detailImages:[{src:media+'ogq-stickers-main.jpg',label:'OGQ 네이버 스티커'}],sourceId:'asset-ogq-sticker'});
+Object.assign(visualWorks[2],{title:'게임 아이템 일러스트',type:'Client Work',tools:['Illustrator','Photoshop'],description:'게임 모임에서 사용할 다양한 아이템 이미지를 의뢰받아 게임의 분위기와 설정에 맞춰 형태와 색상 및 질감을 정리했습니다.',image:media+'game-items-main.jpg',detailImages:[{src:media+'game-items-main.jpg',label:'게임 아이템 일러스트'}],sourceId:'asset-item-illustration'});
+// 영화 포스터는 원본 갤러리에서 확인되지 않아 등록하지 않았습니다. 영상 슬롯과 원본 24개 슬롯은 유지합니다.
+export const visualToolAssets={Photoshop:'./search-main/assets/icons/tools/photoshop.svg',Illustrator:'./search-main/assets/icons/tools/illustrator.svg',Figma:'./search-main/assets/icons/tools/figma.svg'};

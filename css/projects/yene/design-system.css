@@ -1,0 +1,73 @@
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');font-weight:100;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'HotelsPickPretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
+/* Layout from the supplied guide; samples from verified deployed CSS. */
+.uxui-editorial .hotels-design-system{background:#101010;color:#f6f7fa;min-height:100svh;padding:40px 0;}
+.ds-header{margin-bottom:28px;}.ds-header>p{font-size:24px;font-weight:700;margin:0 0 20px;}.ds-header>p span{font-size:12px;letter-spacing:.16em;color:#a9b8cf;margin-left:12px;}.ds-header h3{font-size:clamp(28px,3vw,40px);margin:0;}
+.ds-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,.9fr) minmax(0,1.8fr);gap:40px;align-items:start;}
+.ds-grid h4{font-size:22px;line-height:1.3;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid #3d4655;}
+.ds-swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}.ds-swatches span{display:block;height:76px;border-radius:12px;}.ds-swatches strong,.ds-swatches small{display:block;font-size:12px;line-height:1.4;margin-top:8px;}.ds-swatches small{color:#a9b8cf;margin-top:4px;}
+.ds-buttons{margin-top:30px;}.ds-button-samples{display:grid;gap:16px;}.ds-button-samples small{display:block;font-size:11px;line-height:1.4;color:#a9b8cf;margin-top:5px;}
+.ds-button-samples button{font-family:HotelsPickPretendard,sans-serif;line-height:1.55;border:0;}
+.ds-search{width:100%;height:58px;border-radius:12px;background:#1b4cfe;color:#fff;font-size:16px;font-weight:600;transition:filter .2s ease;}.ds-search:hover{filter:brightness(.94);}
+.ds-tabs{display:flex;width:190px;max-width:100%;height:32px;border-radius:16px;background:#4b5668;overflow:hidden;}.ds-tabs button{flex:1;height:32px;padding:0;border-radius:16px;background:transparent;color:#fff;font-size:13px;font-weight:500;}.ds-tabs button.active{background:#1b4cfe;font-weight:600;}
+.ds-detail{min-width:112px;height:40px;padding:0 21px;border-radius:20px;background:#fff;color:#171a21;font-size:13px;font-weight:600;}
+.ds-partner{width:194px;max-width:100%;height:48px;border-radius:0;background:#1b4cfe;color:#fff;font-size:14px;font-weight:600;}
+.ds-font-name{font-size:17px;margin:0 0 28px;}.ds-font-name span{display:block;font-size:12px;color:#a9b8cf;margin-top:8px;}
+.ds-type-item{margin-bottom:24px;font-family:HotelsPickPretendard,sans-serif;}.ds-type-item>p{margin:0 0 7px;}.ds-sample-h2{font-size:30px;font-weight:700;line-height:1.38;}.ds-sample-h3{font-size:22px;font-weight:700;line-height:1.35;}.ds-sample-card{font-size:15px;font-weight:700;line-height:1.4;}.ds-sample-body{font-size:15px;font-weight:400;line-height:1.55;}
+.ds-type-item small,.ds-type-item code{display:block;font-size:12px;line-height:1.5;color:#a9b8cf;}.ds-type-item code{font-size:11px;margin-top:4px;}
+.ds-source-note{font-size:12px;line-height:1.5;color:#a9b8cf;margin:18px 0 0;word-break:keep-all;}
+.ds-layout-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,.85fr);gap:20px;}.ds-layout figure{margin:0;}.ds-layout figcaption{font-size:15px;margin-bottom:14px;}.ds-layout figcaption span{display:block;font-size:11px;color:#a9b8cf;margin-top:6px;}
+.ds-layout-preview{display:block;padding:0;background:#17212b;cursor:zoom-in;overflow:hidden;}.ds-layout-preview img{display:block;width:100%;height:auto;object-fit:contain;}
+.ds-pc-frame{width:100%;border:6px solid #263242;border-top-width:20px;border-radius:8px;}.ds-phone-frame{width:100%;max-width:190px;border:6px solid #263242;border-radius:24px;}
+.hotels-design-system.is-animated .ds-reveal{opacity:0;transform:translateY(10px);transition:opacity 400ms ease-out,transform 400ms ease-out;transition-delay:var(--ds-delay);}.hotels-design-system.is-revealed .ds-reveal{opacity:1;transform:none;}
+@media(min-width:768px) and (max-height:900px){.ds-grid{gap:28px;}.ds-header{margin-bottom:24px;}.ds-header>p{margin-bottom:14px;}.ds-swatches span{height:64px;}.ds-buttons{margin-top:24px;}.ds-button-samples{gap:12px;}.ds-type-item{margin-bottom:18px;}}
+@media(max-width:900px){.ds-grid{grid-template-columns:1fr 1fr;}.ds-layout{grid-column:1/-1;}}
+@media(max-width:600px){.ds-grid{grid-template-columns:1fr;gap:40px;}.ds-layout{grid-column:auto;}.ds-layout-grid{gap:14px;}.ds-header>p{font-size:22px;}.ds-header>p span{display:block;margin:8px 0 0;}}
+@media(prefers-reduced-motion:reduce){.hotels-design-system .ds-reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+/* Concise visual presentation; button and font rules remain unchanged. */
+.ds-header{margin-bottom:36px;}
+.ds-swatches span{height:84px;}
+.ds-buttons{margin-top:40px;}
+.ds-button-samples{gap:24px;}
+.ds-font-name{margin-bottom:40px;}
+.ds-type-item{margin-bottom:32px;}
+.ds-phone-frame img{width:100%;height:auto;object-fit:contain;}
+@media(min-width:768px) and (max-height:900px){.ds-header{margin-bottom:30px;}.ds-swatches span{height:76px;}.ds-buttons{margin-top:32px;}.ds-button-samples{gap:22px;}.ds-font-name{margin-bottom:30px;}.ds-type-item{margin-bottom:28px;}}
+@media(max-width:600px){.ds-header{margin-bottom:32px;}.ds-buttons{margin-top:32px;}.ds-type-item{margin-bottom:28px;}}
+
+.ds-phone-frame{aspect-ratio:390/844;background:#fff;}.ds-phone-frame img{width:100%;height:100%;object-fit:contain;object-position:center top;}
+
+/* Fill the phone screen width, without shrinking the full long page into it. */
+.ds-phone-frame{position:relative;overflow:hidden;}
+.ds-phone-frame img{display:block;width:100%;height:auto;max-width:none;object-fit:initial;object-position:initial;}
+
+/* 06: 실제 레이아웃 크기와 간격 확대. Typography 샘플 규칙은 유지합니다. */
+.uxui-editorial .hotels-design-system{display:flex;align-items:center;padding:clamp(40px,5svh,64px) 0;}
+.uxui-editorial .hotels-design-system>.ed-inner{width:min(1500px,calc(100% - 80px));margin:auto;}
+.ds-title-row{display:flex;align-items:center;justify-content:space-between;gap:36px;}
+.ds-title-row h3{flex-shrink:0;font-size:clamp(36px,2.8vw,48px);}
+.ds-intro{font-size:clamp(14px,1vw,18px);line-height:1.6;color:#c4cfde;margin:0;word-break:keep-all;}
+.ds-header{margin-bottom:44px;}.ds-grid{grid-template-columns:minmax(0,24fr) minmax(0,23fr) minmax(0,53fr);gap:32px;}
+.ds-grid h4{font-size:26px;margin-bottom:22px;padding-bottom:16px;}
+.ds-swatches{gap:16px;}.ds-swatches span{height:104px;}.ds-swatches strong,.ds-swatches small{font-size:14px;margin-top:10px;}
+.ds-buttons{margin-top:44px;}.ds-button-samples{gap:28px;}
+.ds-search{height:68px;font-size:19px;}.ds-tabs{width:240px;height:40px;border-radius:20px;}.ds-tabs button{height:40px;font-size:16px;border-radius:20px;}
+.ds-detail{min-width:142px;height:50px;border-radius:25px;font-size:16px;padding:0 26px;}.ds-partner{width:242px;height:60px;font-size:17px;}
+.ds-font-name{font-size:20px;margin-bottom:44px;}.ds-type-item{margin-bottom:40px;}.ds-type-item small{font-size:14px;}
+.ds-layout-grid{grid-template-columns:minmax(0,1.75fr) minmax(0,.85fr);gap:24px;}.ds-layout figcaption{font-size:18px;margin-bottom:18px;}.ds-phone-frame{max-width:230px;}
+@media(min-width:901px) and (max-height:900px){.ds-header{margin-bottom:32px;}.ds-swatches span{height:90px;}.ds-buttons{margin-top:34px;}.ds-button-samples{gap:22px;}.ds-type-item{margin-bottom:32px;}.ds-font-name{margin-bottom:32px;}}
+@media(max-width:900px){.ds-grid{grid-template-columns:1fr 1fr;}.ds-title-row{align-items:flex-start;flex-direction:column;gap:18px;}.ds-intro{font-size:16px;}}
+@media(max-width:600px){.uxui-editorial .hotels-design-system>.ed-inner{width:calc(100% - 40px);}.ds-grid{grid-template-columns:1fr;gap:44px;}.ds-layout{grid-column:auto;}.ds-grid h4{font-size:24px;}.ds-title-row h3{font-size:36px;}.ds-swatches span{height:96px;}.ds-layout-grid{gap:14px;}}
+
+/* 06 상단: 영문 표기 다음에 설명 문구를 왼쪽 정렬 */
+.hotels-design-system .ds-title-row{display:block;}
+.hotels-design-system .ds-intro{font-size:clamp(22px,1.35vw,26px);font-weight:600;line-height:1.5;color:#fff;max-width:100%;margin:0;text-align:left;word-break:keep-all;}
+@media(max-width:600px){.hotels-design-system .ds-intro{font-size:20px;}}

@@ -1,0 +1,4 @@
+/* 기존 UX/UI 프로젝트 CTA 스타일을 재사용하며 Content 프로젝트 색상만 맞춥니다. */
+body[data-category=content-design].uxui-editorial .hotels-outcome .do-next { margin-top:28px;background:#ff4f87; }
+body[data-category=content-design].uxui-editorial .hotels-outcome .do-next:hover { background:#e83770; }
+body[data-category=content-design].uxui-editorial .hotels-outcome .do-next:focus-visible { outline-color:#ffb5ce; }

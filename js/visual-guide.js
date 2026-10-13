@@ -1,0 +1,27 @@
+import {closeWindow} from './visual-window-manager.js?v=20261014-guide-6';
+// Cursor art and author bubble geometry are adapted from 자료/portfolio-hero.
+// The reference has static author/visitor pointers, not a sequential tour.
+export function mountVisualGuide(openWork){
+ const key='visual-design-onboarding-seen',layer=document.createElement('div');layer.className='vg-guide';layer.hidden=true;
+ const panels=Array.from({length:4},()=>{const p=document.createElement('div');p.className='vg-guide-panel';layer.append(p);return p;});
+ const ring=document.createElement('div');ring.className='vg-guide-highlight';layer.append(ring);
+ const pointer=document.createElement('section');pointer.className='vg-guide-pointer';pointer.setAttribute('role','dialog');pointer.setAttribute('aria-label','Visual Design 사용 가이드');pointer.innerHTML='<span class="vg-guide-arrow" aria-hidden="true"><img src="./assets/images/visual-guide/cursor-white.png" alt=""></span><div class="vg-guide-bubble"><span class="vg-guide-step"></span><h2></h2><p class="vg-guide-message"></p><p class="vg-guide-tip"></p><div class="vg-guide-actions"><button type="button" class="vg-guide-skip">건너뛰기</button><button type="button" class="vg-guide-next">다음</button></div></div>';layer.append(pointer);document.body.append(layer);
+ const steps=[['궁금한 작업물이 있나요?','파일을 열어 자세히 살펴보세요!'],['작업물은 이렇게 확인할 수 있어요.','창을 옮기거나 크기를 조절할 수도 있답니다.'],['다른 작업물도 궁금하다면?','갤러리와 연락처는 여기에서 확인해요.']];
+ let step=0,target,example=null,active=false,frame=0;
+ const cleanup=()=>{if(example?.dataset.guideOwned==='true')closeWindow(example.dataset.windowKey);example=null;};
+ const remember=()=>{try{sessionStorage.setItem(key,'cursor-guide-v1');}catch{}};
+ function finish(){active=false;layer.hidden=true;cleanup();remember();document.querySelector('[data-dock-key="dock-onboarding"]')?.focus({preventScroll:true});}
+ function position(){frame=0;if(!active||!target?.isConnected)return;let r=target.getBoundingClientRect();if(step===2){const pop=document.querySelector('.vg-dock-popover:not([hidden])');if(pop){const q=pop.getBoundingClientRect();r={left:Math.min(r.left,q.left),top:Math.min(r.top,q.top),right:Math.max(r.right,q.right),bottom:Math.max(r.bottom,q.bottom)};r.width=r.right-r.left;r.height=r.bottom-r.top;}}if(step===1&&innerWidth<=700)r=target.querySelector('.vg-window-bar').getBoundingClientRect();const left=Math.max(0,r.left-8),top=Math.max(0,r.top-8),right=Math.min(innerWidth,r.right+8),bottom=Math.min(innerHeight,r.bottom+8);
+ const regions=[{left:0,top:0,width:innerWidth,height:top},{left:0,top:bottom,width:innerWidth,height:Math.max(0,innerHeight-bottom)},{left:0,top,width:left,height:bottom-top},{left:right,top,width:Math.max(0,innerWidth-right),height:bottom-top}];regions.forEach((rect,i)=>Object.assign(panels[i].style,Object.fromEntries(Object.entries(rect).map(([k,v])=>[k,v+'px']))));Object.assign(ring.style,{left:left+'px',top:top+'px',width:(right-left)+'px',height:(bottom-top)+'px'});
+ const h=pointer.offsetHeight,w=pointer.offsetWidth;let x=r.right-24,y=r.top+16;if(step===2){x=r.left+r.width/2-w/2;y=r.top-h-24;}else if(innerWidth<=700){x=(innerWidth-w)/2;y=step===1?r.bottom+16:(r.top>h+28?r.top-h-20:r.bottom+16);}else if(x+w>innerWidth-12){x=r.left+Math.max(20,r.width-w-24);y=r.top+64;}
+ x=Math.max(12,Math.min(innerWidth-w-12,x));y=Math.max(12,Math.min(innerHeight-h-12,y));Object.assign(pointer.style,{left:x+'px',top:y+'px'});
+ }
+ const schedule=()=>{if(active&&!frame)frame=requestAnimationFrame(position);};
+ function render(){if(step===0)target=document.querySelector('.vg-work[data-file-kind="design"]');if(step===1){target=document.querySelector('.vg-artwork-window.is-active')||document.querySelector('.vg-artwork-window');if(!target){target=openWork('slot-01',true);example=target;}target.addEventListener('windowclosed',()=>{if(active&&step===1){step=2;render();}},{once:true});}if(step===2){cleanup();target=document.querySelector('.vg-dock');}
+ layer.dataset.step=String(step+1);pointer.classList.toggle('is-dock',step===2);pointer.querySelector('.vg-guide-step').textContent=`STEP ${String(step+1).padStart(2,'0')} / 03`;pointer.querySelector('h2').textContent=steps[step][0];pointer.querySelector('.vg-guide-message').textContent=steps[step][1];pointer.querySelector('.vg-guide-tip').textContent=step===0?(innerWidth<=700?'한 번 터치해서 열 수 있어요.':'더블클릭해서 열 수 있어요.'):step===1&&innerWidth<=700?'모바일에서는 화면을 스크롤해 살펴보세요.':'';pointer.querySelector('.vg-guide-next').textContent=step===2?'시작하기':'다음';position();if(!matchMedia('(prefers-reduced-motion:reduce)').matches)pointer.animate([{opacity:0},{opacity:1}],{duration:180,easing:'ease'});pointer.querySelector('.vg-guide-next').focus({preventScroll:true});
+ }
+ function start(){if(active)return;active=true;step=0;layer.hidden=false;remember();render();}
+ pointer.querySelector('.vg-guide-next').addEventListener('click',()=>{if(step===2)finish();else{step++;render();}});pointer.querySelector('.vg-guide-skip').addEventListener('click',finish);
+ document.addEventListener('visual-guide-start',start);addEventListener('resize',()=>{if(active)render();});addEventListener('scroll',schedule,{passive:true});document.addEventListener('pointermove',schedule,{passive:true});document.addEventListener('click',schedule,{passive:true});document.addEventListener('keydown',e=>{if(active&&e.key==='Escape'&&!document.querySelector('dialog[open]')){e.preventDefault();finish();}});
+ let seen=false;try{seen=sessionStorage.getItem(key)==='cursor-guide-v1';}catch{}if(!seen)requestAnimationFrame(start);
+}

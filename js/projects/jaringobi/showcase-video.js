@@ -1,0 +1,3 @@
+// 자린고비 원본 배경 영상만 관리합니다. 생성 도구나 제작자에 대해서는 추정하지 않습니다.
+const video=document.querySelector('body[data-project="jaringobi"] #project-showcase-1 video');
+if(video){const motion=matchMedia('(prefers-reduced-motion:reduce)');let visible=false;const update=()=>{if(visible&&!motion.matches&&!document.hidden)video.play().catch(()=>{});else video.pause();};new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;update();},{threshold:.01}).observe(video);motion.addEventListener('change',update);document.addEventListener('visibilitychange',update);if(motion.matches){video.removeAttribute('autoplay');video.pause();}}

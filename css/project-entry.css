@@ -1,0 +1,9 @@
+/* Applied before first paint only for the explicit continuous-entry URL. */
+html[data-project-entry=showcase] .uxui-cover{display:none;}
+.project-entry-controls{position:fixed;inset:0 0 auto;height:80px;z-index:5000;pointer-events:none;}
+.project-entry-controls .category-nav{position:fixed;top:24px!important;right:28px;left:auto;display:flex;gap:24px;width:auto;margin:0;padding:0;border:0;pointer-events:auto;}
+.project-entry-controls .category-nav a{font-size:13px;color:#e1e8f2;min-height:44px;display:flex;align-items:center;}
+.project-entry-controls .category-nav a[aria-current]{color:#83b5ff;}
+.project-entry-controls .category-nav a[hidden]{display:none;}
+.project-entry-controls .works-home-control{left:28px;top:16px!important;transform:none;pointer-events:auto;}
+@media(max-width:767px){.project-entry-controls .category-nav{right:12px;top:8px!important;gap:12px;}.project-entry-controls .category-nav a{font-size:10px;}.project-entry-controls .works-home-control{left:12px;top:8px!important;}}

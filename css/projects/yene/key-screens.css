@@ -1,0 +1,9 @@
+/* 05 Key Screens: 기존 편집형 배치 유지, 중복 라벨 정리 */
+.uxui-editorial .hotels-key-screens .ks-heading h3{color:#2672d9;font-size:clamp(44px,4vw,64px);font-weight:800;margin:0;line-height:1.15;}
+.hotels-key-screens .ks-copy{position:relative;isolation:isolate;}
+.uxui-editorial .hotels-key-screens .ks-number{position:absolute;left:-5px;top:-118px;z-index:-1;color:#2672d9;opacity:.12;font-size:clamp(110px,10vw,156px);font-weight:800;line-height:1;pointer-events:none;font-variant-numeric:tabular-nums;}
+.uxui-editorial .hotels-key-screens .ks-copy h4{position:relative;margin-top:16px;}
+.hotels-key-screens .ks-line{display:block;}
+.hotels-key-screens .text-blue{color:#2672d9;font-weight:600;}
+.uxui-editorial .hotels-key-screens .ks-copy p{font-size:clamp(15px,1.1vw,18px);line-height:1.8;}
+@media(max-width:767px){.uxui-editorial .hotels-key-screens .ks-heading h3{font-size:42px;}.hotels-key-screens .ks-copy{margin-top:76px;}.uxui-editorial .hotels-key-screens .ks-number{font-size:110px;top:-88px;}.uxui-editorial .hotels-key-screens .ks-copy p{font-size:16px;}}

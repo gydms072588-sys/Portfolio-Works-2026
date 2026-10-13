@@ -1,0 +1,21 @@
+/* Adapted from portfolio-hero .cursor-pointer--author / __arrow / __bubble.
+   OS cursor hiding and visitor pointer-following are deliberately not copied. */
+.vg-guide[hidden]{display:none;}
+.vg-guide-panel{position:fixed;z-index:7000;background:rgba(0,0,0,.5);}
+.vg-guide-highlight{position:fixed;z-index:7001;pointer-events:none;border:2px solid #8fbfff;border-radius:12px;box-shadow:0 0 0 2px #fff7;}
+.vg-guide-pointer{position:fixed;z-index:7100;width:min(420px,calc(100vw - 24px));pointer-events:none;transition:left 280ms ease,top 280ms ease;}
+.vg-guide-arrow{position:absolute;left:0;top:0;display:block;width:42px;height:56px;filter:drop-shadow(0 12px 12px rgba(0,0,0,.26));}
+.vg-guide-arrow img{display:block;width:100%;height:100%;object-fit:contain;filter:brightness(0) saturate(100%) invert(34%) sepia(39%) saturate(1118%) hue-rotate(166deg) brightness(90%) contrast(89%);}
+.vg-guide-bubble{position:relative;margin:32px 0 0 62px;padding:18px 20px;border-radius:0 8px 8px 8px;background:#245f93;color:white;pointer-events:auto;box-shadow:0 14px 32px #0003;}
+.vg-guide-step{font-size:11px;color:#c7e1ff;letter-spacing:.08em;}
+.vg-guide-bubble h2{font-size:19px;line-height:1.4;margin:10px 0;}
+.vg-guide-message{font-size:15px;line-height:1.6;margin:0;}
+.vg-guide-tip{font-size:13px;line-height:1.5;color:#d5e8ff;margin:10px 0 0;}
+.vg-guide-tip:empty{display:none;}
+.vg-guide-actions{display:flex;justify-content:space-between;gap:16px;margin-top:16px;}
+.vg-guide-actions button{min-height:44px;border:0;border-radius:7px;padding:8px 14px;cursor:pointer;font-size:14px;}
+.vg-guide-skip{background:transparent;color:#e2ecf6;}.vg-guide-next{background:white;color:#173854;font-weight:700;}
+.vg-guide-pointer.is-dock .vg-guide-arrow{top:auto;bottom:-18px;left:40px;transform:rotate(170deg);}
+@media(max-width:700px){.vg-guide-pointer{width:min(350px,calc(100vw - 24px));}.vg-guide-bubble{margin:18px 0 0 30px;padding:14px 16px;}.vg-guide-arrow{width:26px;height:35px;}.vg-guide-bubble h2{font-size:17px;}.vg-guide-message{font-size:14px;}}
+@media(prefers-reduced-motion:reduce){.vg-guide-pointer{transition:none;}}
+.vg-guide{position:fixed;inset:0;z-index:7000;pointer-events:none;}.vg-guide-panel{pointer-events:auto;}

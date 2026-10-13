@@ -76,3 +76,10 @@
 .ably-banner-phone,.ably-banner-phone-screen,.ably-banner-slider { overflow:hidden; }
 @media(max-width:1100px) and (min-width:768px){.ably-responsive-banner-board .ably-banner-mobile { --banner-phone-width:275px; }}
 @media(max-width:767px){.ably-responsive-banner-board .ably-banner-mobile { --banner-phone-width:min(100%,350px); }}
+
+/* 배너 아래 손가락 안내. 스마트폰 안 전체에서 드래그/터치로 넘길 수 있습니다. */
+.ably-banner-phone-screen { touch-action:pan-y;user-select:none;cursor:grab; }
+.ably-mobile-banner-viewer { cursor:grab; }
+.ably-banner-phone-screen.is-banner-dragging,.is-banner-dragging .ably-mobile-banner-viewer { cursor:grabbing; }
+.ably-banner-swipe-hint { position:absolute;left:0;right:0;bottom:13%;display:flex;flex-direction:column;align-items:center;gap:8px;color:#e83770;font-size:14px;font-weight:600;line-height:1.5;pointer-events:none; }
+.ably-banner-swipe-hint svg { width:38px;height:38px; }

@@ -1,0 +1,12 @@
+/* Project label must not inherit the large heading's computed negative letter spacing. */
+body[data-project=jaringobi] .jaringobi-project-label{display:block;font-size:20px;font-weight:600;line-height:1.5;letter-spacing:.03em;margin-bottom:20px;color:#fff;}
+body[data-project=jaringobi] #project-showcase-1{--ably-showcase-pink:#d8b99a;}
+body[data-project=jaringobi] .ably-showcase-background-video{object-position:center 78%;}
+body[data-project=jaringobi] #project-showcase-1 .project-desktop-screen .hotelspick-screen-preview{display:grid;place-items:center;}
+body[data-project=jaringobi] #project-showcase-1 .project-desktop-screen img{height:100%;width:100%;object-fit:contain;}
+.jaringobi-media-caption{position:absolute;bottom:0;left:0;right:0;color:#fff;text-align:center;font-size:12px;line-height:1.5;margin:0;}
+@media(max-width:767px){body[data-project=jaringobi] .jaringobi-project-label{font-size:16px;line-height:1.5;margin-bottom:16px;letter-spacing:.03em;}.jaringobi-media-caption{font-size:11px;}}
+body[data-project=jaringobi] .hotelspick-showcase #project-showcase-1{--ably-showcase-pink:#d8b99a;}
+body[data-project=jaringobi] #project-showcase-1 .project-desktop-screen .hotelspick-screen-preview{position:relative;overflow:hidden;}
+body[data-project=jaringobi] #project-showcase-1 .project-desktop-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;}
+.jaringobi-media-caption{z-index:6;bottom:-26px;background:rgba(9,12,16,.75);padding:6px 10px;border-radius:6px;}

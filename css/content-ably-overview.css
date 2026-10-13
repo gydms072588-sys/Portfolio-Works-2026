@@ -24,3 +24,6 @@
  body[data-category=content-design].uxui-editorial .ably-overview.works-template-section { min-height:100svh;height:auto;padding-top:clamp(100px,10svh,140px);padding-bottom:clamp(120px,13svh,160px); }
 }
 @media(max-width:767px){body[data-category=content-design].uxui-editorial .ably-overview.works-template-section { height:auto;padding-top:64px;padding-bottom:80px; }}
+
+/* 원본 1863px 중 실제 페이지 영역 x632~1231(600px)만 미리보기 폭에 맞춥니다. */
+.ably-overview .hotels-before-preview img { width:310.5%;max-width:none;height:auto;margin-left:-105.333333%; }

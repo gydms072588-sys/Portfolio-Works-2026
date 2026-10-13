@@ -1,0 +1,2 @@
+/* UX/UI의 Problem → Direction 경계만 조정. 콘텐츠/등장/Key Screens 오버랩 유지. */
+@media(min-width:768px){body[data-category=ux-ui].uxui-editorial .hotels-problem.works-template-section{min-height:0;height:auto;padding-top:64px;padding-bottom:48px;}body[data-category=ux-ui].uxui-editorial .hotels-direction.works-template-section{min-height:0;height:auto;padding-top:48px;padding-bottom:64px;}}
