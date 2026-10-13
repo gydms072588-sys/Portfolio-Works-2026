@@ -1,0 +1,1 @@
+const team=document.querySelector('.jaringobi-team');if(team&&!matchMedia('(prefers-reduced-motion:reduce)').matches){team.classList.add('is-animated');const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){team.classList.add('is-revealed');observer.disconnect();}},{threshold:.12});observer.observe(team);}

@@ -35,3 +35,6 @@ motionPrompt.promptHighlights=['모션','제약'];
 SkillWorkflow.find(node=>node.id==='planning').caption='브랜드 방향과 핵심 키워드를 정리하고, 제작 콘셉트를 설계합니다.';
 SkillWorkflow.find(node=>node.id==='video').caption='작업 목적에 따라 AI 영상 생성과 직접 편집을 선택합니다.';
 SkillWorkflow.find(node=>node.id==='review').caption='와이어프레임을 설계하고 웹 화면을 구현합니다.';
+
+// 설명을 보조하는 개념 도식. 실제 작업물·성과 이미지로 표시하지 않습니다.
+for(const node of SkillWorkflow){if(node.id==='planning')continue;const key=node.id==='review'?'review':node.id==='video'?'video':'image';node.outputAssets=[{src:'./search-main/assets/images/workflow/'+key+'.svg',alt:node.id==='review'?'와이어프레임과 반응형 웹 구현 도식':node.id==='video'?'영상 재생과 컷 편집 타임라인 도식':'여러 이미지 시안의 비교 도식'}];for(const method of node.methods||[]){const key=method.id==='image-ai'?'image-ai':method.id.startsWith('video')?'video':'image';method.outputAssets=[{src:'./search-main/assets/images/workflow/'+key+'.svg',alt:method.title+' 설명용 도식'}];}}

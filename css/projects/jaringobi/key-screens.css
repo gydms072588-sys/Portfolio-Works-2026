@@ -1,6 +1,14 @@
 /* Content Design KEY SCREENS 전용 색상. 배치/목업/등장 효과는 기존 CSS·JS 재사용. */
-.uxui-editorial .ably-key-screens { background:#FFF0F5;color:#161313; }
-.uxui-editorial .ably-key-screens .ks-heading h3 { color:#FF4F87; }
-.uxui-editorial .ably-key-screens .ks-number { color:#FF4F87; }
-.ably-key-screens .text-blue { color:#E83770; }
-.uxui-editorial .ably-key-screens .ks-copy p { color:#293440; }
+.uxui-editorial .ably-key-screens { background:#FCFBF7;color:#35452F; }
+.uxui-editorial .ably-key-screens .ks-heading h3 { color:#597D4C; }
+.uxui-editorial .ably-key-screens .ks-number { color:#597D4C; }
+.ably-key-screens .text-blue { color:#597D4C; }
+.uxui-editorial .ably-key-screens .ks-copy p { color:#55564D; }
+
+/* 자린고비 KEY SCREENS: 행 배치와 등장 효과는 유지하고 화면 프레임만 모바일로 교체. */
+.jaringobi-key-screens .jaringobi-ks-mobile{display:flex;justify-content:center;margin:0;background:transparent;}
+.jaringobi-key-screens .jaringobi-ks-phone{display:block;width:clamp(240px,22vw,320px);max-width:100%;padding:7px;border:3px solid #59605d;border-radius:36px;background:#182126;overflow:hidden;box-shadow:0 16px 32px #1613131a;cursor:zoom-in;}
+.jaringobi-key-screens .jaringobi-ks-phone img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:25px;}
+@media(max-width:767px){.jaringobi-key-screens .jaringobi-ks-phone{width:min(290px,100%);}}
+
+.uxui-editorial .jaringobi-key-screens .ks-copy h4{color:#35452F;}

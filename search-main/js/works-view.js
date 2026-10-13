@@ -22,7 +22,7 @@
   {id:'ux-ui',label:'UX/UI',visual:'ux',url:localWorks?localWorks+'uxui.html':null},
   {id:'design',label:'Design',visual:'design',url:localWorks?localWorks+'content-design.html':null},
   {id:'video-editing',label:'Video Editing',visual:'video',url:localWorks?localWorks+'motion-video.html':null},
-  {id:'indesign',label:'InDesign',visual:'indesign',url:localWorks?localWorks+'visual-design.html':null},
+  {id:'indesign',label:'InDesign',visual:'indesign',url:'https://gydms072588-sys.github.io/Portfolio-Gallery_2026/index.html'},
  ];
  // 원본 데이터는 보존하고 설정에 따라 표시할 카테고리만 선택합니다.
  const settings=globalThis.PortfolioWorksSettings;

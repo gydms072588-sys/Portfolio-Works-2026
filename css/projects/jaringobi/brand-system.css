@@ -1,0 +1,17 @@
+/* 기존 Design System의 header / ds-grid / 열 비율·간격·등장 효과 재사용. */
+body[data-project="jaringobi"] .jaringobi-brand-system{background:#182019;color:#d0d2c8;}
+.jaringobi-brand-system .ds-header>p span,.jaringobi-brand-system .ds-source-note,.jaringobi-brand-system .ds-font-name span,.jaringobi-brand-system .ds-swatches small{color:#abbca2;}
+.jaringobi-brand-system .ds-intro,.jaringobi-brand-system h4{color:#f4eddc;}
+.jaringobi-brand-system .ds-grid h4{border-color:#abbca240;}
+.jaringobi-brand-system .ds-swatches{grid-template-columns:repeat(2,minmax(0,1fr));}
+.jaringobi-brand-system .jaringobi-type-source{display:block;width:100%;height:auto;}
+.jaringobi-brand-system .jaringobi-logo-summary{display:grid;grid-template-columns:140px minmax(0,1fr);gap:24px;align-items:center;margin-bottom:24px;}
+.jaringobi-brand-system .jaringobi-logo-summary img{width:100%;height:auto;border-radius:16px;}
+.jaringobi-brand-system .jaringobi-logo-summary p{font-size:15px;line-height:1.8;margin:0;word-break:keep-all;}
+.jaringobi-brand-system .jaringobi-logo-process{margin:0;}
+.jaringobi-brand-system .jaringobi-logo-process figcaption{font-size:14px;color:#abbca2;margin-bottom:14px;}
+.jaringobi-brand-system .jaringobi-logo-process button{display:block;width:100%;padding:0;border:0;background:white;cursor:zoom-in;}
+.jaringobi-brand-system .jaringobi-logo-process img{display:block;width:100%;height:auto;}
+.jaringobi-brand-system .jaringobi-ui-excerpt{position:relative;height:auto;aspect-ratio:505/170;overflow:hidden;}
+.jaringobi-brand-system .jaringobi-ui-excerpt img{position:absolute;bottom:0;left:0;width:100%;height:auto;}
+@media(max-width:600px){.jaringobi-brand-system .jaringobi-logo-summary{grid-template-columns:110px minmax(0,1fr);gap:18px;}}

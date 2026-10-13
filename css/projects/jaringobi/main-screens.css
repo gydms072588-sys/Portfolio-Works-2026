@@ -1,0 +1,20 @@
+/* 04에만 적용. 앱 PNG의 베이지·초록을 사용하며 기존 direction 등장 규칙 재사용. */
+body[data-project="jaringobi"] .jaringobi-main-screens{background:#182019;color:#f4eddc;padding:100px 32px;min-height:100svh;}
+.jaringobi-main-screens .jaringobi-main-inner{max-width:1500px;margin:auto;}
+.jaringobi-main-screens h3{color:#f4eddc;font-size:clamp(36px,3.5vw,56px);font-weight:800;line-height:1.2;text-align:center;margin:0 0 56px;}
+.jaringobi-main-screens .jaringobi-main-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start;}
+.jaringobi-main-screens .jaringobi-main-item{margin:0;text-align:center;min-width:0;}
+.jaringobi-main-screens .jaringobi-main-phone{width:min(100%,280px);aspect-ratio:505/1168;margin:0 auto 28px;padding:8px;border:3px solid #59605d;border-radius:36px;overflow:hidden;background:#f4eddc;box-shadow:0 16px 32px #393d2d18;}
+.jaringobi-main-screens .jaringobi-main-phone img{display:block;width:100%;height:100%;object-fit:contain;border-radius:24px;}
+.jaringobi-main-screens figcaption>span{color:#597d4c;font-size:14px;font-weight:700;letter-spacing:.08em;}
+.jaringobi-main-screens h4{font-size:23px;color:#f4eddc;margin:12px 0;line-height:1.4;}
+.jaringobi-main-screens figcaption p{font-size:16px;line-height:1.7;color:#55564d;margin:0;word-break:keep-all;}
+@media(max-width:767px){body[data-project="jaringobi"] .jaringobi-main-screens{padding:80px 24px;}.jaringobi-main-screens .jaringobi-main-grid{grid-template-columns:1fr;gap:56px;}.jaringobi-main-screens h3{font-size:36px;margin-bottom:40px;}.jaringobi-main-screens .jaringobi-main-phone{width:min(100%,290px);}}
+/* Continuous gallery confined to 04 MAIN SCREENS. */
+.jaringobi-main-screens .jaringobi-screen-flow{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;touch-action:pan-x pan-y;cursor:grab;padding:12px 0 32px;}
+.jaringobi-main-screens .jaringobi-screen-flow::-webkit-scrollbar{display:none;}
+.jaringobi-main-screens .jaringobi-screen-track{display:flex;width:max-content;gap:40px;}
+.jaringobi-main-screens .jaringobi-screen-track .jaringobi-main-phone{flex:0 0 280px;width:280px;margin:0;aspect-ratio:505/1307;}
+@media(max-width:767px){.jaringobi-main-screens .jaringobi-screen-track{gap:24px;}.jaringobi-main-screens .jaringobi-screen-track .jaringobi-main-phone{flex-basis:250px;width:250px;}}
+.jaringobi-main-screens .jaringobi-main-inner{width:100%;min-width:0;}
+.jaringobi-main-screens .jaringobi-screen-flow{width:100%;max-width:100%;min-width:0;}

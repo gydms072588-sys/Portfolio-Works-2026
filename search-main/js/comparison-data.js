@@ -8,7 +8,7 @@ globalThis.ProfileComparisons = [
 // Preserve verified assets and copy from the existing templates as editable tab data.
 ProfileComparisons.forEach(data=>{
  // 비교 버튼은 카테고리 선택 화면을 거치지 않고 해당 작업물 페이지로 연결합니다.
- const pages={'ux-ui':'uxui.html','content-design':'content-design.html','visual-design':'visual-design.html'};
+ const pages={'ux-ui':'uxui.html','content-design':'content-design.html','visual-design':'https://gydms072588-sys.github.io/Portfolio-Gallery_2026/index.html'};
  data.ctaHref=new URL(pages[data.id],globalThis.PortfolioWorksBase||new URL('./',location.href)).href;
  const figures=document.getElementById(data.templateId)?.content.querySelectorAll('.qa-compare-item');
  ['before','after'].forEach((key,index)=>{

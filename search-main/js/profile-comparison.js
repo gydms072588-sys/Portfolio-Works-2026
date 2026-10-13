@@ -54,7 +54,7 @@
    panel.id='qa-comparison-panel';panel.setAttribute('aria-labelledby','qa-comparison-tab-'+data.id);
    buttons.forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;});
    const label=document.createElement('span');label.textContent=data.cta.replace(/\s*→$/, '');
-   cta.replaceChildren(label);cta.dataset.categoryId=data.categoryId;cta.setAttribute('href',data.ctaHref);
+   cta.replaceChildren(label);cta.dataset.categoryId=data.categoryId;cta.setAttribute('href',data.ctaHref);if(data.ctaHref.includes('Portfolio-Gallery_2026')){cta.target='_blank';cta.rel='noopener noreferrer';}
    if(animate&&!matchMedia('(prefers-reduced-motion: reduce)').matches)animation=panel.animate([{opacity:0},{opacity:1}],{duration:240,easing:'ease-out'});
   }
   ProfileComparisons.forEach((data,index)=>{

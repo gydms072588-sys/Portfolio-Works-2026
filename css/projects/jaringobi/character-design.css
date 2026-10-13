@@ -1,0 +1,14 @@
+body[data-project="jaringobi"] .jaringobi-character{background:#182019;color:#d0d2c8;padding:100px 32px;}
+.jaringobi-character-inner{max-width:1500px;margin:auto;}.jaringobi-character h3{font-size:clamp(36px,4vw,60px);color:#f4eddc;margin:0 0 24px;line-height:1.2;}.jaringobi-character header p{font-size:20px;line-height:1.7;margin:0 0 48px;word-break:keep-all;}
+.jaringobi-character figure{margin:0;min-width:0;}.jaringobi-character figcaption{font-size:15px;font-weight:700;letter-spacing:.08em;color:#abbca2;margin:0 0 20px;}
+.jaringobi-character button{display:block;padding:0;border:0;width:100%;background:white;cursor:zoom-in;}.jaringobi-character button:focus-visible{outline:3px solid #617c53;outline-offset:5px;}.jaringobi-character img{display:block;width:100%;height:auto;object-fit:contain;}
+.jaringobi-character-main{margin-bottom:56px!important;}.jaringobi-character-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;align-items:start;}.jaringobi-character-apps{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.jaringobi-character.is-animated .sns-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}.jaringobi-character.is-revealed .sns-reveal{opacity:1;transform:none;}
+@media(max-width:767px){body[data-project="jaringobi"] .jaringobi-character{padding:80px 24px;}.jaringobi-character header p{font-size:17px;}.jaringobi-character-grid{grid-template-columns:1fr;gap:40px;}.jaringobi-character-apps{grid-template-columns:1fr;gap:40px;}.jaringobi-character-apps figure{max-width:320px;width:100%;margin:auto;}}
+
+.jaringobi-character .jaringobi-character-grid{grid-template-columns:1fr;}
+.jaringobi-character .jaringobi-costumes{max-width:1000px;width:100%;margin-inline:auto;}
+.jaringobi-character-ai{margin-top:48px;}
+.jaringobi-character-ai h4{font-size:15px;letter-spacing:.08em;color:#abbca2;margin:0 0 20px;}
+.jaringobi-character-ai-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start;}
+@media(max-width:767px){.jaringobi-character-ai-grid{grid-template-columns:1fr;gap:28px;}}
