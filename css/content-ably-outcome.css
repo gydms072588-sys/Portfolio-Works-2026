@@ -1,0 +1,8 @@
+/* ABLY 마지막 결과 섹션 전용. 기존 카드 외곽과 등장 규칙은 공유합니다. */
+.uxui-editorial .ably-outcome { background:#100c12;color:#fff; }
+.ably-outcome .do-label { color:#ff4f87;font-size:18px;font-weight:600;line-height:1.5; }
+.uxui-editorial .ably-outcome .do-item { background:#211720;text-align:center; }
+.ably-outcome .do-item h4,.ably-outcome .do-change,.ably-outcome .do-effect { text-align:center; }
+.ably-outcome .do-icon,.ably-outcome .do-arrow { color:#ff4f87; }
+.ably-outcome .do-change { color:#c7c7c7; }
+.ably-outcome .do-effect { color:#fff; }

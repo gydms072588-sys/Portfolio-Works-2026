@@ -1,0 +1,6 @@
+/* Content Design KEY SCREENS 전용 색상. 배치/목업/등장 효과는 기존 CSS·JS 재사용. */
+.uxui-editorial .ably-key-screens { background:#FFF0F5;color:#161313; }
+.uxui-editorial .ably-key-screens .ks-heading h3 { color:#FF4F87; }
+.uxui-editorial .ably-key-screens .ks-number { color:#FF4F87; }
+.ably-key-screens .text-blue { color:#E83770; }
+.uxui-editorial .ably-key-screens .ks-copy p { color:#293440; }

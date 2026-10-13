@@ -1,0 +1,43 @@
+/* ABLY 콘텐츠 소개만 적용. 공유 Direction의 등장 효과/지연값 재사용. */
+.uxui-editorial .ably-content-intro { background:#101010;text-align:left;--ably-intro-pink:#ff4f87; }
+.uxui-editorial .ably-content-intro>.ably-intro-grid { width:min(1500px,calc(100% - 240px));display:grid;grid-template-columns:minmax(0,.3fr) minmax(0,.7fr);gap:64px;align-items:start; }
+.ably-intro-information { display:grid;gap:48px; }
+.ably-content-intro .ably-intro-block h3,.ably-content-intro .ably-intro-block h4,.ably-content-intro .ably-intro-heading { margin:0 0 20px;font-size:19px;font-weight:700;line-height:1.3;color:var(--ably-intro-pink); }
+.ably-intro-block p { margin:0;color:#fff;font-size:17px;line-height:1.8;word-break:keep-all; }
+.ably-intro-colors { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px; }
+.ably-intro-colors>div { display:grid;gap:8px;min-width:0; }
+.ably-intro-colors span { height:100px;border-radius:12px; }
+.ably-intro-colors strong,.ably-intro-colors small { font-size:13px; }
+.ably-intro-colors small { color:#c7c7c7; }
+.ably-content-intro .hotels-direction-cards { gap:20px; }
+.ably-content-intro .hotels-direction-cards li { padding:28px 18px; }
+.ably-content-intro .hotels-direction-cards li>span { color:var(--ably-intro-pink); }
+.ably-content-intro .hotels-direction-cards h4 { font-size:22px; }
+.ably-content-intro .hotels-direction-cards p { font-size:16px; }
+.ably-intro-mockups { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px; }
+.ably-intro-mockups figure { margin:0;min-width:0;display:grid;justify-items:center; }
+.ably-intro-phone { position:relative;display:block;width:min(100%,220px);aspect-ratio:520/1053;padding:0;border:0;overflow:hidden;background:none;cursor:zoom-in; }
+.ably-intro-phone-screen { position:absolute;z-index:2;top:4.1%;left:6.2%;width:87.6%;height:92.1%;overflow:hidden;border-radius:10% / 4.6%;background:#fff; }
+.ably-intro-phone-screen img { display:block;width:100%;height:auto;max-height:none; }
+.ably-intro-phone-frame { position:absolute;z-index:1;top:-8.25%;left:-70.6%;width:241.15%;height:119.1%;max-width:none;object-fit:fill;pointer-events:none; }
+.ably-intro-phone:after { position:absolute;z-index:3;top:4.45%;left:50%;width:8px;height:8px;border:2px solid #252a2d;border-radius:50%;background:#0b1014;content:"";transform:translateX(-50%);pointer-events:none; }
+.ably-intro-mockups figcaption { margin-top:18px;text-align:center;color:#fff;font-size:13px;font-weight:600;line-height:1.6; }
+.ably-intro-mockups figcaption span { display:block;color:#c7c7c7;font-size:14px;font-weight:400; }
+@media(max-width:1100px) and (min-width:768px){.uxui-editorial .ably-content-intro>.ably-intro-grid { gap:32px;grid-template-columns:minmax(0,.25fr) minmax(0,.75fr); }.ably-content-intro .hotels-direction-cards h4 { font-size:18px; }.ably-content-intro .hotels-direction-cards p { font-size:14px; }}
+@media(max-width:767px){.uxui-editorial .ably-content-intro>.ably-intro-grid { width:calc(100% - 40px);grid-template-columns:1fr;gap:48px; }.ably-intro-information { gap:32px; }.ably-intro-colors span { height:88px; }.ably-content-intro .hotels-direction-cards { grid-template-columns:1fr; }.ably-content-intro .hotels-direction-cards li { min-height:230px; }.ably-intro-mockups { grid-template-columns:1fr;gap:36px; }.ably-intro-phone { width:220px; }}
+
+/* MAIN CONTENT 내부만 중앙 정렬. 외곽 크기·행 높이·간격·등장 효과 유지. */
+.ably-content-intro .hotels-direction-cards li { text-align:center;align-content:center;justify-items:center; }
+.ably-content-intro .hotels-direction-cards li>span,
+.ably-content-intro .hotels-direction-cards h4,
+.ably-content-intro .hotels-direction-cards p { text-align:center;justify-self:center; }
+
+/* 기존 열과 목업은 유지. 이 설명만 열 사이 여유 폭 안에서 2줄 표시. */
+.ably-content-intro .ably-direction-description { width:calc(100% + 64px);font-size:16px;line-height:1.8; }
+.ably-direction-description>span { display:block;white-space:nowrap; }
+@media(min-width:768px){body[data-category=content-design].uxui-editorial .ably-content-intro.works-template-section { min-height:100svh;height:auto;padding-top:clamp(120px,12svh,160px);padding-bottom:clamp(100px,10svh,140px); }}
+@media(max-width:1100px) and (min-width:768px){.ably-content-intro .ably-direction-description { width:100%; }.ably-direction-description>span { white-space:normal; }}
+@media(max-width:767px){
+ body[data-category=content-design].uxui-editorial .ably-content-intro.works-template-section { height:auto;padding-top:80px;padding-bottom:64px; }
+ .ably-content-intro .ably-direction-description { width:100%;font-size:14px; }
+}

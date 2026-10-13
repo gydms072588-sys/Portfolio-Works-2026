@@ -22,6 +22,16 @@
 <link rel="stylesheet" href="./css/content-cover-gallery.css?v=20261013-content-centered-4">
 <link rel="stylesheet" href="./css/content-ably-showcase.css?v=20261013-ably-video-2">
 <script type="module" src="./js/content-ably-showcase.js?v=20261013-ably-video-2"></script>
+<link rel="stylesheet" href="./css/content-ably-overview.css?v=20261014-section-spacing-3">
+<link rel="stylesheet" href="./css/content-ably-intro.css?v=20261014-section-spacing-3">
+<link rel="stylesheet" href="./css/content-ably-key-screens.css?v=20261014-ably-key-1">
+<link rel="stylesheet" href="./css/content-ably-design-system.css?v=20261014-ably-ds-1">
+<link rel="stylesheet" href="./css/content-ably-ai-video.css?v=20261014-ai-inplace-4">
+<script type="module" src="./js/content-ably-ai-video.js?v=20261014-ai-inplace-4"></script>
+<link rel="stylesheet" href="./css/content-ably-showcases.css?v=20261014-banner-scaled-4">
+<script type="module" src="./js/content-ably-showcases.js?v=20261014-independent-showcases-1"></script>
+<script type="module" src="./js/content-ably-banner-slider.js?v=20261014-banner-scaled-2"></script>
+<link rel="stylesheet" href="./css/content-ably-outcome.css?v=20261014-outcome-1">
 </head>
 <body data-mobile-pc-content data-category="content-design" class="uxui-editorial">
 <a class="skip" href="#main">본문으로 바로가기</a>
@@ -323,82 +333,87 @@
 </div>
 </section>
 <!-- 03 문제 정의 및 판단 기준 : HTML 문구 직접 수정 -->
-<!-- 03 Problem : 문구 및 Before 이미지 직접 수정 -->
-<section class="ed-strategy works-template-section hotels-problem" data-works-section="why-direction" data-nav-label="Problem" aria-labelledby="hotels-problem-title">
+<!-- 03 ABLY Overview : 원본 모바일 이미지와 문구 -->
+<section class="ed-strategy works-template-section hotels-problem ably-overview" data-works-section="why-direction" data-nav-label="Overview" aria-labelledby="hotels-problem-title">
  <div class="ed-inner hotels-problem-grid">
   <div class="hotels-problem-copy">
-   <h3 id="hotels-problem-title" class="hotels-problem-reveal" style="--problem-delay:0ms">Problem</h3>
-   <div class="hotels-feedback hotels-problem-reveal" style="--problem-delay:500ms">
-    <span class="hotels-feedback-avatar" aria-hidden="true"><img src="./assets/navigation/person.svg" alt=""></span>
-    <p>메인 페이지가 AI로 만든 것 같아요</p>
-   </div>
+   <h3 id="hotels-problem-title" class="hotels-problem-reveal" style="--problem-delay:0ms">Overview</h3>
    <div class="hotels-feedback hotels-feedback-response hotels-problem-reveal" style="--problem-delay:1000ms">
-    <p>기존 화면을 살펴보고, 개선할 부분부터 정리해볼게요.</p>
-    <span class="hotels-feedback-avatar" aria-hidden="true"><img src="./assets/navigation/person.svg" alt=""></span>
+    <p>에이블리의 모바일 커머스 구성을 바탕으로 상품과 혜택 콘텐츠를 PC 환경에 맞게 재구성한 개인 리디자인 프로젝트입니다.</p>
    </div>
    <ol class="hotels-problem-list">
-    <li class="hotels-problem-reveal" style="--problem-delay:2300ms"><span>01</span><div><h4>정형화된 화면 구성</h4><p>반복되는 카드와 섹션 구성으로 서비스만의 개성이 부족했습니다.</p></div></li>
-    <li class="hotels-problem-reveal" style="--problem-delay:2550ms"><span>02</span><div><h4>불명확한 정보 우선순위</h4><p>검색과 추천 콘텐츠가 함께 강조되어 사용자의 핵심 행동이 명확하지 않았습니다.</p></div></li>
-    <li class="hotels-problem-reveal" style="--problem-delay:2800ms"><span>03</span><div><h4>약한 브랜드 인상</h4><p>가격 비교와 호텔 탐색이라는 서비스의 특징이 화면에서 충분히 드러나지 않았습니다.</p></div></li>
+    <li class="hotels-problem-reveal" style="--problem-delay:2300ms"><span>01</span><div><h4>콘텐츠 위계 재구성</h4><p>상품과 추천 정보를 <span class="ably-overview-keyword">PC 화면에 맞게 배치</span>해 주요 콘텐츠를 한눈에 파악할 수 있도록 구성</p></div></li>
+    <li class="hotels-problem-reveal" style="--problem-delay:2550ms"><span>02</span><div><h4>프로모션 콘텐츠 강조</h4><p>메인 비주얼과 <span class="ably-overview-keyword">쇼핑 혜택</span>을 중심으로 주요 프로모션이 돋보이도록 표현</p></div></li>
+    <li class="hotels-problem-reveal" style="--problem-delay:2800ms"><span>03</span><div><h4>상품 탐색 흐름 정리</h4><p>카테고리와 추천 상품의 연결을 고려해 자연스럽게 <span class="ably-overview-keyword">쇼핑 콘텐츠를 탐색</span>하도록 설계</p></div></li>
    </ol>
   </div>
-  <figure class="hotels-before-frame hotels-problem-reveal" style="--problem-delay:1700ms" aria-label="리디자인 이전 호텔스픽 메인페이지 이미지 영역">
-   <!-- 실제 이미지 준비 후 아래 빈 영역을 img로 교체: <img src="./assets/images/파일명.png" alt="리디자인 이전 호텔스픽 메인페이지"> -->
-   <button class="hotels-before-preview" type="button" aria-label="호텔스픽 Before 이미지 원본 확대 보기"><img src="./assets/images/templates/content-design/hotelspick-before-screen.png" alt="리디자인 이전 호텔스픽 메인페이지"></button>
+  <figure class="hotels-before-frame hotels-problem-reveal" style="--problem-delay:1700ms" aria-label="에이블리 모바일 메인페이지 이미지 영역">
+   <button class="hotels-before-preview" type="button" aria-label="에이블리 모바일 메인페이지 원본 확대 보기"><img src="./assets/images/content-ably/ably-mobile-overview.png" alt="에이블리 모바일 메인페이지"></button>
   </figure>
  </div>
 </section>
 <!-- 04 주요 작업 : HTML 문구 직접 수정 -->
 <!-- 04 Design Direction : Problem 다음의 독립 화면 -->
 <div class="direction-key-overlap">
-<section class="hotels-direction works-template-section" data-works-section="design-direction" data-nav-label="Design Direction" aria-labelledby="hotels-direction-title">
- <div class="ed-inner">
-  <header class="hotels-direction-step" style="--direction-delay:0ms"><h3 id="hotels-direction-title">무엇을 바꿀 것인가</h3></header>
-  <svg class="hotels-direction-arrow hotels-direction-step" style="--direction-delay:140ms" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8 8 8-8" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-<ol class="hotels-direction-cards">
-   <li class="hotels-direction-step" style="--direction-delay:280ms"><span>01</span><h4>정보 구조 재정리</h4><p>핵심 정보와 추천 콘텐츠의 우선순위를 명확하게 구분</p></li>
-   <li class="hotels-direction-step" style="--direction-delay:410ms"><span>02</span><h4>검색 중심 탐색 강화</h4><p>검색을 핵심 행동으로 배치해 숙소 탐색 흐름 개선</p></li>
-   <li class="hotels-direction-step" style="--direction-delay:540ms"><span>03</span><h4>브랜드 인상 강화</h4><p>블루 중심의 일관된 비주얼 톤으로 서비스 개성 강화</p></li>
-  </ol>
-  <svg class="hotels-direction-arrow direction-point-arrow hotels-direction-step" style="--direction-delay:670ms" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8 8 8-8" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  <div class="hotels-direction-point direction-point-message hotels-direction-step" style="--direction-delay:800ms"><span class="direction-bulb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 3H9c0-1 0-2-1-3Z"/><path d="M12 1v1M3 5l1 1m16-1-1 1"/></svg></span><div class="direction-point-bubble"><p>Point</p><h4>한 화면에서 결정하는 “경험”</h4></div></div>
+<section class="hotels-direction works-template-section ably-content-intro" data-works-section="design-direction" data-nav-label="Design Direction" aria-labelledby="hotels-direction-title">
+ <div class="ed-inner ably-intro-grid">
+  <div class="ably-intro-information">
+   <div class="hotels-direction-step ably-intro-block" style="--direction-delay:0ms"><h3 id="hotels-direction-title">DESIGN DIRECTION</h3><p class="ably-direction-description"><span>모바일 중심의 쇼핑 콘텐츠를 PC 환경에 맞게 재배치하고</span><span>상품과 혜택 정보가 자연스럽게 연결되도록 구성했습니다.</span></p></div>
+   <div class="hotels-direction-step ably-intro-block" style="--direction-delay:140ms"><h4>CONCEPT</h4><p>다양한 상품과 쇼핑 혜택을 직관적으로 탐색할 수 있도록 콘텐츠를 재구성했습니다.</p></div>
+   <div class="hotels-direction-step ably-intro-block" style="--direction-delay:670ms"><h4>KEY COLOR</h4><div class="ably-intro-colors">
+    <div><span style="background:#FF4F87"></span><strong>Primary</strong><small>#FF4F87</small></div>
+    <div><span style="background:#E83770"></span><strong>Dark</strong><small>#E83770</small></div>
+    <div><span style="background:#FFF0F5"></span><strong>Soft</strong><small>#FFF0F5</small></div>
+   </div></div>
+  </div>
+  <div class="ably-intro-content">
+   <h4 class="ably-intro-heading">MAIN CONTENT</h4>
+   <ol class="hotels-direction-cards">
+    <li class="hotels-direction-step" style="--direction-delay:280ms"><span>01</span><h4>메인 페이지</h4><p>대표 배너와 쇼핑 혜택을 중심으로 주요 콘텐츠 구성</p></li>
+    <li class="hotels-direction-step" style="--direction-delay:410ms"><span>02</span><h4>상품 목록 페이지</h4><p>카테고리와 상품 정보를 정리해 탐색 흐름 구체화</p></li>
+    <li class="hotels-direction-step" style="--direction-delay:540ms"><span>03</span><h4>상품 상세 페이지</h4><p>상품 정보와 상세 콘텐츠를 한눈에 확인하도록 구성</p></li>
+   </ol>
+   <div class="ably-intro-mockups hotels-direction-step" style="--direction-delay:800ms">
+    <figure><button class="hotelspick-screen-preview ably-intro-phone" type="button" aria-label="ABLY 메인 페이지 전체 이미지 보기"><span class="ably-intro-phone-screen"><img src="./assets/images/content-ably/mobile-pages/index.png" alt="ABLY 리디자인 모바일 메인 페이지" width="390" height="4873" loading="lazy"></span><img class="ably-intro-phone-frame" src="./assets/images/content-ably/android-phone.png" alt="" aria-hidden="true"></button><figcaption>MAIN PAGE<span>메인 페이지</span></figcaption></figure>
+    <figure><button class="hotelspick-screen-preview ably-intro-phone" type="button" aria-label="ABLY 상품 목록 페이지 전체 이미지 보기"><span class="ably-intro-phone-screen"><img src="./assets/images/content-ably/mobile-pages/category.png" alt="ABLY 리디자인 모바일 상품 목록 페이지" width="390" height="3219" loading="lazy"></span><img class="ably-intro-phone-frame" src="./assets/images/content-ably/android-phone.png" alt="" aria-hidden="true"></button><figcaption>PRODUCT LIST<span>상품 목록 페이지</span></figcaption></figure>
+    <figure><button class="hotelspick-screen-preview ably-intro-phone" type="button" aria-label="ABLY 상품 상세 페이지 전체 이미지 보기"><span class="ably-intro-phone-screen"><img src="./assets/images/content-ably/mobile-pages/product-detail.png" alt="ABLY 리디자인 모바일 상품 상세 페이지" width="390" height="7002" loading="lazy"></span><img class="ably-intro-phone-frame" src="./assets/images/content-ably/android-phone.png" alt="" aria-hidden="true"></button><figcaption>PRODUCT DETAIL<span>상품 상세 페이지</span></figcaption></figure>
+   </div>
+  </div>
  </div>
 </section>
 
 <!-- 05 주요 화면 : HTML 문구 직접 수정 -->
 <!-- 06 Key Screens : 최종 구현 화면을 직접 캡처하여 적용 -->
-<section class="key-screens hotels-key-screens works-template-section" aria-labelledby="key-screens-heading" data-works-section="key-screens"><div class="ed-inner"><header class="ks-heading"><h3 id="key-screens-heading">KEY SCREENS</h3></header>
-<article class="ks-row"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="HotelsPick Main Visual & Search 실제 화면 확대 보기"><img src="./assets/images/templates/content-design/hotelspick-key-main.png" alt="HotelsPick 실제 구현 화면 — Main Visual & Search" width="1425" height="720" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">01</span><h4>Main Visual & Search</h4><p><span class="ks-line">여행 비주얼 아래 <span class="text-blue">검색창을 겹쳐 배치</span>했습니다.</span><span class="ks-line">여행지 날짜 투숙객 입력을 한곳에 모았습니다.</span></p></div></article>
-<article class="ks-row is-reverse"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="HotelsPick 특가 호텔 실제 화면 확대 보기"><img src="./assets/images/templates/content-design/hotelspick-key-deals.png" alt="HotelsPick 실제 구현 화면 — 특가 호텔" width="993" height="578" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">02</span><h4>특가 호텔</h4><p><span class="ks-line">숙소 이미지와 <span class="text-blue">할인율·가격을 함께 표시</span>했습니다.</span><span class="ks-line">좌우 슬라이더로 숙소를 비교할 수 있습니다.</span></p></div></article>
-<article class="ks-row"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="HotelsPick HOT 여행지 실제 화면 확대 보기"><img src="./assets/images/templates/content-design/hotelspick-key-destinations.png" alt="HotelsPick 실제 구현 화면 — HOT 여행지" width="993" height="434" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">03</span><h4>HOT 여행지</h4><p><span class="ks-line"><span class="text-blue">국내·해외 탭과 도시 목록</span>을 구분했습니다.</span><span class="ks-line">선택한 여행지의 추천 콘텐츠를 보여줍니다.</span></p></div></article>
-<article class="ks-row is-reverse"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="HotelsPick 평점 높은 숙소 실제 화면 확대 보기"><img src="./assets/images/templates/content-design/hotelspick-key-rated.png" alt="HotelsPick 실제 구현 화면 — 평점 높은 숙소" width="993" height="1016" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">04</span><h4>평점 높은 숙소</h4><p><span class="ks-line"><span class="text-blue">지역 필터를 숙소 목록 위에 배치</span>했습니다.</span><span class="ks-line">이미지 가격 평점을 같은 구조로 비교합니다.</span></p></div></article>
-<article class="ks-row"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="HotelsPick 제휴 문의 CTA 실제 화면 확대 보기"><img src="./assets/images/templates/content-design/hotelspick-key-partner.png" alt="HotelsPick 실제 구현 화면 — 제휴 문의 CTA" width="992" height="281" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">05</span><h4>제휴 문의 CTA</h4><p><span class="ks-line">숙소 탐색 다음에 <span class="text-blue">제휴 문의 CTA</span>를 배치했습니다.</span><span class="ks-line">탐색과 제휴 문의의 목적을 구분했습니다.</span></p></div></article>
+<section class="key-screens hotels-key-screens works-template-section ably-key-screens" aria-labelledby="key-screens-heading" data-works-section="key-screens"><div class="ed-inner"><header class="ks-heading"><h3 id="key-screens-heading">KEY SCREENS</h3></header>
+<article class="ks-row"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="ABLY MAIN PAGE — 메인 페이지 실제 화면 확대 보기"><img src="./assets/images/content-ably/key-screens/index-desktop.png" alt="ABLY 실제 구현 화면 — MAIN PAGE — 메인 페이지" width="1440" height="900" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">01</span><h4>MAIN PAGE — 메인 페이지</h4><p><span class="ks-line"><span class="text-blue">히어로 영상</span>으로 대표 비주얼을 보여줍니다.</span><span class="ks-line">프로모션 영역에서 <span class="text-blue">쇼핑 혜택</span>을 안내합니다.</span></p></div></article>
+<article class="ks-row is-reverse"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="ABLY PRODUCT LIST — 상품 목록 실제 화면 확대 보기"><img src="./assets/images/content-ably/key-screens/category-desktop.png" alt="ABLY 실제 구현 화면 — PRODUCT LIST — 상품 목록" width="1440" height="900" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">02</span><h4>PRODUCT LIST — 상품 목록</h4><p><span class="ks-line"><span class="text-blue">카테고리 탐색</span>과 추천 상품을 연결했습니다.</span><span class="ks-line">목록에 이미지와 가격 등 <span class="text-blue">상품 정보</span>를 표시했습니다.</span></p></div></article>
+<article class="ks-row"><div class="ks-visual"><div class="ks-browser"><div class="ks-browser-bar"></div><figure class="work-media"><button class="media-button" type="button" aria-label="ABLY PRODUCT DETAIL — 상품 상세 실제 화면 확대 보기"><img src="./assets/images/content-ably/key-screens/product-detail-desktop.png" alt="ABLY 실제 구현 화면 — PRODUCT DETAIL — 상품 상세" width="1440" height="900" loading="lazy" decoding="async"></button></figure></div></div><div class="ks-copy"><span class="ks-number">03</span><h4>PRODUCT DETAIL — 상품 상세</h4><p><span class="ks-line">상품 이미지와 <span class="text-blue">상세 정보</span>를 나란히 배치했습니다.</span><span class="ks-line">배송·옵션 영역을 포함한 <span class="text-blue">상세 UI 화면</span>입니다.</span></p></div></article>
 </div></section>
 </div><!-- Design Direction / Key Screens 전환 레이어 끝 -->
 <!-- HotelsPick 디자인 시스템: 배포 사이트 실제 CSS와 화면 기준 -->
-<section class="hotels-design-system works-template-section" data-works-section="design-system" data-nav-label="Design System" aria-labelledby="hotels-ds-title">
+<section class="hotels-design-system works-template-section ably-design-system" data-works-section="design-system" data-nav-label="Design System" aria-labelledby="hotels-ds-title">
  <div class="ed-inner">
-  <header class="ds-header ds-reveal" style="--ds-delay:0ms"><p>HotelsPick <span>| DESIGN SYSTEM</span></p><div class="ds-title-row"><p class="ds-intro" id="hotels-ds-title">컬러와 타이포그래피, UI 요소에 일관된 규칙을 적용해 화면의 통일성을 높였습니다.</p></div></header>
+  <header class="ds-header ds-reveal" style="--ds-delay:0ms"><p>ABLY <span>| DESIGN SYSTEM</span></p><div class="ds-title-row"><p class="ds-intro" id="hotels-ds-title">컬러와 타이포그래피 및 UI 요소에 일관된 규칙을 적용해 쇼핑 콘텐츠의 시각적 통일성을 높였습니다.</p></div></header>
   <div class="ds-grid">
    <div class="ds-left ds-reveal" style="--ds-delay:160ms">
-    <section class="ds-colors"><h4>Color</h4><div class="ds-swatches"><div><span style="background:#1B4CFE"></span><strong>Blue</strong><small>#1B4CFE</small></div><div><span style="background:#F6F7FA"></span><strong>Soft White</strong><small>#F6F7FA</small></div><div><span style="background:#4B5668"></span><strong>Slate Gray</strong><small>#4B5668</small></div></div></section>
+    <section class="ds-colors"><h4>Color</h4><div class="ds-swatches"><div><span style="background:#FF4F87"></span><strong>Pink</strong><small>#FF4F87</small></div><div><span style="background:#FFF0F5"></span><strong>Soft Pink</strong><small>#FFF0F5</small></div><div><span style="background:#FFFFFF"></span><strong>White</strong><small>#FFFFFF</small></div><div><span style="background:#161313"></span><strong>Ink</strong><small>#161313</small></div></div></section>
     <section class="ds-buttons"><h4>Button</h4><div class="ds-button-samples">
-     <div><button class="ds-search" type="button">검색</button></div>
-     <div><div class="ds-tabs"><button class="active" type="button">국내</button><button type="button">해외</button></div></div>
-     <div><button class="ds-detail" type="button">자세히 보기</button></div>
-     <div><button class="ds-partner" type="button">제휴 문의하기</button></div>
+     <div><button class="ds-search" type="button">지금 쇼핑하기</button></div>
+     <div><div class="ds-tabs"><button class="active" type="button">전체</button><button type="button">의류</button></div></div>
+     <div><button class="ds-detail" type="button">구매하기</button></div>
+     <div><button class="ds-partner" type="button">장바구니 담기</button></div>
     </div></section>
    </div>
-   <section class="ds-typography ds-reveal" style="--ds-delay:320ms"><h4>Typography</h4><p class="ds-font-name">Pretendard </p>
-    <div class="ds-type-item"><p class="ds-sample-h2">Headline 2</p><small>30px · 700</small></div>
-    <div class="ds-type-item"><p class="ds-sample-h3">Headline 3</p><small>22px · 700</small></div>
-    <div class="ds-type-item"><p class="ds-sample-card">Hotel Card Title</p><small>15px · 700</small></div>
-    <div class="ds-type-item"><p class="ds-sample-body">Paragraph / Body</p><small>15px · 400</small></div>
+   <section class="ds-typography ds-reveal" style="--ds-delay:320ms"><h4>Typography</h4><p class="ds-font-name">Paperozi</p>
+    <div class="ds-type-item"><p class="ds-sample-h2">Main Title</p><small>44–66px (4.1vw) · 700</small></div>
+    <div class="ds-type-item"><p class="ds-sample-h3">Section Title</p><small>24–34px (2.5vw) · 700</small></div>
+    <div class="ds-type-item"><p class="ds-sample-card">Product Card Title</p><small>17px · 600</small></div>
+    <div class="ds-type-item"><p class="ds-sample-body">Paragraph / Body</p><small>16px · 400</small></div>
     
    </section>
    <section class="ds-layout ds-reveal" style="--ds-delay:480ms"><h4>Layout</h4><div class="ds-layout-grid">
-    <figure><figcaption>PC Layout </figcaption><button class="ds-layout-preview ds-pc-frame" data-full-image="./assets/images/templates/content-design/hotelspick-live-pc.png" type="button" aria-label="호텔스픽 실제 PC 화면 전체 확대"><img src="./assets/images/templates/content-design/hotelspick-layout-pc.png" alt="호텔스픽 실제 PC 구현 첫 화면"></button></figure>
-    <figure><figcaption>Mobile Layout </figcaption><button class="ds-layout-preview ds-phone-frame" data-full-image="./assets/images/templates/content-design/hotelspick-mobile-screen.png" type="button" aria-label="호텔스픽 실제 모바일 화면 전체 확대"><img src="./assets/images/templates/content-design/hotelspick-mobile-screen.png" alt="첨부한 호텔스픽 모바일 메인페이지"></button></figure>
+    <figure><figcaption>PC Layout </figcaption><button class="ds-layout-preview ds-pc-frame" data-full-image="./assets/images/content-ably/design-system/main-pc-full.png" type="button" aria-label="ABLY 실제 PC 화면 전체 확대"><img src="./assets/images/content-ably/design-system/main-pc-preview.png" alt="ABLY 실제 PC 구현 첫 화면"></button></figure>
+    <figure><figcaption>Mobile Layout </figcaption><button class="ds-layout-preview ds-phone-frame" data-full-image="./assets/images/content-ably/design-system/main-mobile.png" type="button" aria-label="ABLY 실제 모바일 화면 전체 확대"><img src="./assets/images/content-ably/design-system/main-mobile.png" alt="ABLY 실제 모바일 반응형 메인페이지"></button></figure>
    </div></section>
   </div>
  </div>
@@ -406,17 +421,82 @@
 
 <!-- 06 Before & After : HTML 문구 직접 수정 -->
 <!-- 07 Before & After : 기획서 4p After 원본 + 기존 Before -->
+<!-- 기존 비교 구조/6개 슬라이드 데이터를 보존합니다. 필요하면 template 내용을 복원하세요. -->
+<template id="ably-before-after-preserved">
 <section class="hotels-pair-comparison works-template-section" data-works-section="before-after" aria-labelledby="hotels-compare-title" data-pair-slides="[{&quot;name&quot;: &quot;메인 비주얼·검색&quot;, &quot;before&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p4-before.png&quot;, &quot;after&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p4-after.png&quot;, &quot;beforeCopy&quot;: &quot;검색과 추천 정보의 우선순위가 불명확했습니다.&quot;, &quot;afterCopy&quot;: &quot;검색을 핵심 영역으로 배치하고 브랜드 인상을 강화했습니다.&quot;, &quot;page&quot;: 4, &quot;afterHighlight&quot;: &quot;검색을 핵심 영역으로 배치&quot;}, {&quot;name&quot;: &quot;특가 호텔&quot;, &quot;before&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p5-before.png&quot;, &quot;after&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p5-after.png&quot;, &quot;beforeCopy&quot;: &quot;일반적인 카드 구성으로 특가 혜택이 돋보이지 않았습니다.&quot;, &quot;afterCopy&quot;: &quot;세로형 카드와 할인율·가격 강조로 혜택 비교를 쉽게 구성했습니다.&quot;, &quot;page&quot;: 5, &quot;afterHighlight&quot;: &quot;할인율·가격 강조&quot;}, {&quot;name&quot;: &quot;평점 높은 숙소&quot;, &quot;before&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p6-before.png&quot;, &quot;after&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p6-after.png&quot;, &quot;beforeCopy&quot;: &quot;숙소 비교에 필요한 평점과 탐색 기준이 부족했습니다.&quot;, &quot;afterCopy&quot;: &quot;그리드형 카드와 지역 필터로 숙소 비교 구조를 개선했습니다.&quot;, &quot;page&quot;: 6, &quot;afterHighlight&quot;: &quot;그리드형 카드와 지역 필터&quot;}, {&quot;name&quot;: &quot;HOT 여행지&quot;, &quot;before&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p7-before.png&quot;, &quot;after&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p7-after.png&quot;, &quot;beforeCopy&quot;: &quot;여행지가 단순 나열되어 지역별 특징이 드러나지 않았습니다.&quot;, &quot;afterCopy&quot;: &quot;인기 여행지를 큐레이션 형태로 재구성했습니다.&quot;, &quot;page&quot;: 7, &quot;afterHighlight&quot;: &quot;큐레이션 형태로 재구성&quot;}, {&quot;name&quot;: &quot;제휴 문의&quot;, &quot;before&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p8-before.png&quot;, &quot;after&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p8-after.png&quot;, &quot;beforeCopy&quot;: &quot;제휴 문의가 다른 정보와 섞여 목적이 불명확했습니다.&quot;, &quot;afterCopy&quot;: &quot;페이지 마지막에 독립된 제휴 문의 CTA를 배치했습니다.&quot;, &quot;page&quot;: 8, &quot;afterHighlight&quot;: &quot;독립된 제휴 문의 CTA&quot;}, {&quot;name&quot;: &quot;내비게이션&quot;, &quot;before&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p9-before.png&quot;, &quot;after&quot;: &quot;./assets/images/templates/content-design/hotelspick-pdf-p9-after.png&quot;, &quot;beforeCopy&quot;: &quot;메뉴가 분산되어 핵심 기능을 찾기 어려웠습니다.&quot;, &quot;afterCopy&quot;: &quot;핵심 메뉴를 간소화하고 플로팅 메뉴로 접근성을 높였습니다.&quot;, &quot;page&quot;: 9, &quot;afterHighlight&quot;: &quot;핵심 메뉴를 간소화&quot;}]">
 <div class="pair-inner"><header class="pair-header"><h3 id="hotels-compare-title">Before &amp; <span class="pair-highlight">After</span></h3></header>
 <div class="pair-slider"><button class="pair-prev" type="button" aria-label="이전 비교 항목">‹</button><div class="pair-images"><figure class="pair-figure"><img class="pair-before-image" src="./assets/images/templates/content-design/hotelspick-pdf-p4-before.png" alt="메인 비주얼·검색 Before" width="997" height="565"><figcaption><h4>Before</h4><p class="pair-before-copy">검색과 추천 정보의 우선순위가 불명확했습니다.</p></figcaption></figure><figure class="pair-figure"><img class="pair-after-image" src="./assets/images/templates/content-design/hotelspick-pdf-p4-after.png" alt="메인 비주얼·검색 After" width="997" height="565"><figcaption><h4 class="pair-highlight">After</h4><p class="pair-after-copy"><span class="pair-highlight">검색을 핵심 영역으로 배치</span>하고 브랜드 인상을 강화했습니다.</p></figcaption></figure></div><button class="pair-next" type="button" aria-label="다음 비교 항목">›</button></div>
 <div class="pair-pagination" aria-label="비교 슬라이드 선택"><button type="button" data-pair-index="0" aria-label="01 메인 비주얼·검색" aria-pressed="true"></button><button type="button" data-pair-index="1" aria-label="02 특가 호텔" aria-pressed="false"></button><button type="button" data-pair-index="2" aria-label="03 평점 높은 숙소" aria-pressed="false"></button><button type="button" data-pair-index="3" aria-label="04 HOT 여행지" aria-pressed="false"></button><button type="button" data-pair-index="4" aria-label="05 제휴 문의" aria-pressed="false"></button><button type="button" data-pair-index="5" aria-label="06 내비게이션" aria-pressed="false"></button></div></div></section>
+</template>
+<section class="ably-ai-production works-template-section" data-works-section="before-after" data-nav-label="AI Video Production" aria-labelledby="ably-ai-title">
+ <div class="ai-production-grid">
+  <header class="ai-production-header"><h3 id="ably-ai-title">AI VIDEO PRODUCTION</h3><p>콘셉트 기획부터 AI 영상 제작까지</p></header>
+  <div class="ai-production-media">
+  <div class="ai-production-player"><video controls muted playsinline preload="metadata" poster="./assets/images/content-ably/ably-video-poster-01.png" src="./assets/videos/ably-hero-01.mp4" aria-label="ABLY VIDEO 01 라이프스타일 히어로 영상"></video>  <figure class="ai-production-storyboard ai-storyboard-inplace" id="ably-ai-storyboard" hidden><figcaption>VIDEO 01 · STORYBOARD</figcaption><div class="ai-storyboard-scroll"><button class="ai-storyboard-preview" type="button" aria-label="ABLY VIDEO 01 스토리보드 전체 보기"><img src="./assets/images/ably-hero-video-storyboard.png" alt="ABLY 히어로 VIDEO 01 라이프스타일 스토리보드" loading="lazy"></button></div><button type="button" class="ai-storyboard-expand ai-storyboard-enlarge" aria-label="스토리보드 전체 확대 보기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 21h5v-5M3 3l7 7m11 11-7-7M16 3h5v5M8 21H3v-5"/></svg></button><span class="ai-storyboard-hint" aria-hidden="true">클릭하여 확대 보기</span></figure></div>
+  <div class="ai-production-controls">
+  <div class="ai-production-select" role="group" aria-label="ABLY 최종 영상 선택"><button type="button" data-ai-video="0" aria-pressed="true">VIDEO 01</button><button type="button" data-ai-video="1" aria-pressed="false">VIDEO 02</button></div><button type="button" class="ai-storyboard-toggle" aria-expanded="false" aria-controls="ably-ai-storyboard"><span class="ai-toggle-switch" aria-hidden="true"><span></span></span><span class="ai-toggle-label">스토리보드 보기</span></button></div>
+  </div>
+  <div class="ai-production-info">
+   <div><h4>CONCEPT</h4><p>브랜드 무드와 쇼핑 경험을 담은 히어로 영상 2종</p><p class="ai-selected-concept">일상 속 모바일 쇼핑 경험을 중심으로 제작한 라이프스타일 콘셉트</p></div>
+   <div><h4>STORYBOARD</h4><p>장면의 흐름과 주요 오브젝트를 정리해 영상 구성을 구체화했습니다.</p><p class="ai-selected-story">탐색 → 선택 → 만족 → 브랜드 인지</p></div>
+   <div><h4>AI PROMPT</h4><p>장면 구성과 피사체 동작 및 카메라 구도를 중심으로 AI 영상 생성 프롬프트를 설계했습니다.</p></div>
+  </div>
+
+ </div>
+</section>
 <!-- 07 결과 및 기대효과 : HTML 문구 직접 수정 -->
-<section class="design-outcome hotels-outcome works-template-section" aria-labelledby="design-outcome-heading" data-works-section="design-outcome">
+<!-- ABLY 실제 배너/히어로: 하나의 편집형 보드. 상세페이지와 그리드를 공유하지 않습니다. -->
+<section class="ably-art-showcase ably-banner-showcase works-template-section" id="ably-banner-showcase" data-works-section="banner-hero" data-nav-label="Banner" aria-labelledby="ably-banner-title">
+ <div class="ably-showcase-inner">
+  <header class="showcase-heading"><h3 id="ably-banner-title">BANNER</h3></header>
+  <div class="ably-banner-board ably-responsive-banner-board">
+   <div class="ably-banner-pc">
+    <figure data-art-reveal><button type="button" class="ably-art-preview" data-showcase-full="./assets/images/content-ably/banner-responsive/section3-mom-pc.png" aria-label="ABLY PC 배너 — 엄마를 자랑하고 100만원 받아가세요! 원본 보기"><img src="./assets/images/content-ably/banner-responsive/section3-mom-pc.png" alt="ABLY PC 전용 배너 — 엄마를 자랑하고 100만원 받아가세요!" width="1181" height="233" loading="lazy"></button></figure>
+    <figure data-art-reveal><button type="button" class="ably-art-preview" data-showcase-full="./assets/images/content-ably/banner-responsive/section3-snack-pc.png" aria-label="ABLY PC 배너 — 믿고 먹는 찐맛템 GET! 원본 보기"><img src="./assets/images/content-ably/banner-responsive/section3-snack-pc.png" alt="ABLY PC 전용 배너 — 믿고 먹는 찐맛템 GET!" width="1181" height="233" loading="lazy"></button></figure>
+    <figure data-art-reveal><button type="button" class="ably-art-preview" data-showcase-full="./assets/images/content-ably/banner-responsive/section3-brand-pc.png" aria-label="ABLY PC 배너 — 브랜드 블프 OPEN 타임어택 최저가 원본 보기"><img src="./assets/images/content-ably/banner-responsive/section3-brand-pc.png" alt="ABLY PC 전용 배너 — 브랜드 블프 OPEN 타임어택 최저가" width="1181" height="233" loading="lazy"></button></figure>
+    <p class="ably-banner-label">PC BANNER</p>
+   </div>
+   <div class="ably-banner-mobile" data-art-reveal>
+    <p class="ably-banner-label ably-mobile-label">MOBILE BANNER</p>
+    <div class="ably-banner-phone">
+     <div class="ably-banner-phone-screen">
+      <div class="ably-banner-slider" data-banner-active="0" aria-label="ABLY 모바일 전용 배너 3종">
+       <button type="button" class="ably-mobile-banner-viewer" aria-label="모바일 배너 01 원본 확대 보기">
+        <span class="ably-banner-track">
+         <span class="ably-banner-slide" aria-hidden="true"><img src="./assets/images/content-ably/banner-responsive/section3-brand-mobile.png" alt="ABLY 모바일 전용 배너 — 브랜드 블프 OPEN 타임어택 최저가" draggable="false"></span>
+         <span class="ably-banner-slide" ><img src="./assets/images/content-ably/banner-responsive/section3-mom-mobile.png" alt="ABLY 모바일 전용 배너 — 엄마를 자랑하고 100만원 받아가세요!" draggable="false"></span>
+         <span class="ably-banner-slide" aria-hidden="true"><img src="./assets/images/content-ably/banner-responsive/section3-snack-mobile.png" alt="ABLY 모바일 전용 배너 — 믿고 먹는 찐맛템 GET!" draggable="false"></span>
+         <span class="ably-banner-slide" aria-hidden="true"><img src="./assets/images/content-ably/banner-responsive/section3-brand-mobile.png" alt="ABLY 모바일 전용 배너 — 브랜드 블프 OPEN 타임어택 최저가" draggable="false"></span>
+         <span class="ably-banner-slide" aria-hidden="true"><img src="./assets/images/content-ably/banner-responsive/section3-mom-mobile.png" alt="ABLY 모바일 전용 배너 — 엄마를 자랑하고 100만원 받아가세요!" draggable="false"></span>
+        </span>
+       </button>
+      </div>
+     </div>
+     <img class="ably-banner-phone-frame" src="./assets/images/content-ably/android-phone.png" alt="" aria-hidden="true">
+    </div>
+
+   </div>
+  </div>
+ </div>
+</section>
+<!-- 하나의 ABLY 블라우스 상세페이지와 그 작업의 실제 주요 구간을 표시합니다. -->
+<section class="ably-art-showcase ably-detail-showcase works-template-section" id="ably-detail-showcase" data-works-section="product-detail-design" data-nav-label="Product Detail" aria-labelledby="ably-detail-title">
+ <div class="ably-showcase-inner">
+  <header class="showcase-heading"><h3 id="ably-detail-title">PRODUCT DETAIL DESIGN</h3><p>Soft Pintuck Blouse · 하나의 상세페이지에서 이어지는 주요 구간</p></header>
+  <div class="ably-detail-composition">
+   <figure class="ably-detail-main" data-art-reveal><div class="ably-detail-window"><div class="ably-detail-bar">Soft Pintuck Blouse</div><button type="button" class="ably-art-preview ably-detail-long-preview" data-showcase-full="./assets/images/content-ably/showcases/product-ably-blouse-detail.png" aria-label="ABLY 블라우스 상세페이지 전체 원본 보기"><img src="./assets/images/content-ably/showcases/product-ably-blouse-detail.png" alt="ABLY 블라우스 상세페이지 전체 디자인의 상단 미리보기" width="800" height="9963" loading="lazy"></button></div><figcaption>전체 상세페이지 · 상단 미리보기</figcaption></figure>
+   <figure class="ably-detail-material" data-art-reveal><div class="ably-detail-window"><div class="ably-detail-bar">COLOR / DETAIL</div><button type="button" class="ably-art-preview" data-showcase-full="./assets/images/content-ably/showcases/detail-03.jpg" aria-label="같은 ABLY 블라우스 상세페이지 컬러 비교 구간 원본 보기"><img src="./assets/images/content-ably/showcases/detail-03.jpg" alt="동일 블라우스 상세페이지의 컬러 비교 구간" loading="lazy"></button><button type="button" class="ably-art-preview" data-showcase-full="./assets/images/content-ably/showcases/detail-04.jpg" aria-label="같은 ABLY 블라우스 상세페이지 디테일 및 소재 구간 원본 보기"><img src="./assets/images/content-ably/showcases/detail-04.jpg" alt="동일 블라우스 상세페이지의 넥라인 소매 소재 설명 구간" loading="lazy"></button></div><figcaption>컬러 · 디테일 · 소재</figcaption></figure>
+   <figure class="ably-detail-product" data-art-reveal><div class="ably-detail-window"><div class="ably-detail-bar">PRODUCT VIEW</div><button type="button" class="ably-art-preview" data-showcase-full="./assets/images/content-ably/showcases/detail-05.jpg" aria-label="같은 ABLY 블라우스 상세페이지 제품 앞뒤 구간 원본 보기"><img src="./assets/images/content-ably/showcases/detail-05.jpg" alt="동일 블라우스 상세페이지의 핑크 제품 앞뒤 이미지 구간" loading="lazy"></button></div><figcaption>제품 앞 · 뒤</figcaption></figure>
+   <figure class="ably-detail-size" data-art-reveal><div class="ably-detail-window"><div class="ably-detail-bar">SIZE INFO</div><button type="button" class="ably-art-preview" data-showcase-full="./assets/images/content-ably/showcases/detail-08.jpg" aria-label="같은 ABLY 블라우스 상세페이지 사이즈 소재 관리 구간 원본 보기"><img src="./assets/images/content-ably/showcases/detail-08.jpg" alt="동일 블라우스 상세페이지의 사이즈 소재 관리 정보 구간" loading="lazy"></button></div><figcaption>사이즈 · 소재 · 관리</figcaption></figure>
+  </div>
+ </div>
+</section>
+<section class="design-outcome hotels-outcome works-template-section ably-outcome" aria-labelledby="design-outcome-heading" data-works-section="design-outcome">
 <div class="ed-inner">
-<header class="do-reveal" style="--do-delay:0ms"><h3 id="design-outcome-heading">정보는 명확하게 탐색은 자연스럽게.</h3><p class="do-summary">디자인 개선을 통해 기대하는 사용자 경험</p></header>
-<div class="do-grid"><article class="do-item do-reveal" style="--do-delay:180ms"><svg class="do-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg><h4>정보 인지</h4><p class="do-change">핵심 정보의 위계 정리</p><svg class="do-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg><p class="do-effect">필요한 정보 파악 용이</p></article>
-<article class="do-item do-reveal" style="--do-delay:330ms"><svg class="do-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><h4>탐색 흐름</h4><p class="do-change">검색 중심의 화면 재구성</p><svg class="do-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg><p class="do-effect">탐색 시작 단계 단순화</p></article>
-<article class="do-item do-reveal" style="--do-delay:480ms"><svg class="do-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4h-1a2 2 0 0 1 0-4h3a5 5 0 0 0 5-5c0-3-5-5-9-5Z"/><circle cx="7" cy="9" r=".7"/><circle cx="11" cy="6" r=".7"/><circle cx="16" cy="7" r=".7"/></svg><h4>브랜드 인상</h4><p class="do-change">블루 톤과 콘텐츠 표현 통일</p><svg class="do-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg><p class="do-effect">서비스 인지도 강화 기대</p></article>
+<header class="do-reveal" style="--do-delay:0ms"><p class="do-label">DESIGN OUTCOME</p><h3 id="design-outcome-heading">콘텐츠의 목적을 정리하고,<br>화면에 맞는 경험으로 확장하다.</h3></header>
+<div class="do-grid"><article class="do-item do-reveal" style="--do-delay:180ms"><svg class="do-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg><h4>비주얼 콘텐츠 확장</h4><p class="do-change">AI 히어로 영상 및 프로모션 콘텐츠 제작</p><svg class="do-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg><p class="do-effect">콘텐츠 표현 방식 다양화</p></article>
+<article class="do-item do-reveal" style="--do-delay:330ms"><svg class="do-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><h4>매체별 콘텐츠 구성</h4><p class="do-change">PC·모바일 배너 제작 및 적용</p><svg class="do-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg><p class="do-effect">화면 환경에 맞는 콘텐츠 구성</p></article>
+<article class="do-item do-reveal" style="--do-delay:480ms"><svg class="do-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4h-1a2 2 0 0 1 0-4h3a5 5 0 0 0 5-5c0-3-5-5-9-5Z"/><circle cx="7" cy="9" r=".7"/><circle cx="11" cy="6" r=".7"/><circle cx="16" cy="7" r=".7"/></svg><h4>쇼핑 정보의 시각화</h4><p class="do-change">상품·혜택 콘텐츠 재배치</p><svg class="do-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg><p class="do-effect">일관된 쇼핑 콘텐츠 표현</p></article>
 </div>
 
 

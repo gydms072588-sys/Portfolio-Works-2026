@@ -1,7 +1,7 @@
 // 기존 섹션 애니메이션과 슬라이드 이미지 전환에는 추가 효과를 적용하지 않습니다.
 const motion=matchMedia('(prefers-reduced-motion: reduce)');
 if(!motion.matches){
- const selectors='.key-screens .ks-heading,.key-screens .ks-row .ks-visual,.key-screens .ks-row .ks-copy,.hotels-pair-comparison .pair-header,.hotels-pair-comparison figcaption,.ba-comparison .ed-section-heading,.ba-comparison .ba-copy';
+ const selectors='.key-screens .ks-heading,.key-screens .ks-row .ks-visual,.key-screens .ks-row .ks-copy,.hotels-pair-comparison .pair-header,.hotels-pair-comparison figcaption,.ba-comparison .ed-section-heading,.ba-comparison .ba-copy,.ably-ai-production .ai-production-header,.ably-ai-production .ai-production-info,.ably-ai-production .ai-production-player,.ably-ai-production .ai-production-storyboard:not(.ai-storyboard-inplace),.ably-art-showcase .showcase-heading,.ably-art-showcase [data-art-reveal]';
  const pending=new Set(document.querySelectorAll(selectors));
  const animations=new Set();
  function reveal(node,immediate=false){if(!pending.delete(node))return;observer.unobserve(node);node.classList.remove('scroll-content-pending');if(immediate)return;

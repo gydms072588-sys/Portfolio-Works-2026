@@ -51,7 +51,7 @@ if(problem&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
  problem.classList.add('has-message-sequence');
  const title=problem.querySelector('h3'),feedback=problem.querySelector('.hotels-feedback:not(.hotels-feedback-response)'),response=problem.querySelector('.hotels-feedback-response'),image=problem.querySelector('.hotels-before-frame'),cards=[...problem.querySelectorAll('.hotels-problem-list li')];
  const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
- async function reveal(node,duration=380){const animation=node.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'translateY(0)'}],{duration,easing:'ease-out',fill:'forwards'});await animation.finished;node.style.opacity='1';node.style.transform='none';animation.cancel();}
+ async function reveal(node,duration=380){if(!node){await pause(duration);return;}const animation=node.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'translateY(0)'}],{duration,easing:'ease-out',fill:'forwards'});await animation.finished;node.style.opacity='1';node.style.transform='none';animation.cancel();}
  const observer=new IntersectionObserver(async entries=>{if(!entries.some(e=>e.isIntersecting))return;observer.disconnect();
   await reveal(title);await pause(180);await reveal(feedback,400);await pause(220);await reveal(response,400);await pause(250);
   const actual=image.querySelector('img');if(actual)await actual.decode().catch(()=>{});await reveal(image,450);await pause(220);
@@ -64,7 +64,8 @@ if(problem&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
 const direction=document.querySelector('.hotels-direction');if(direction&&!matchMedia('(prefers-reduced-motion:reduce)').matches){direction.classList.add('is-animated');const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){direction.classList.add('is-revealed');observer.disconnect();}},{threshold:.15});observer.observe(direction);}
 
 // Problem Before 이미지: 원본 비율 유지, ESC/닫기/배경 클릭은 공통 뷰어 사용
- document.querySelectorAll('.hotels-before-preview').forEach(button=>button.addEventListener('click',()=>{const img=button.querySelector('img');large.src=img.src;large.alt=img.alt;viewer.showModal();}));
+ document.querySelectorAll('.hotels-before-preview').forEach(button=>button.addEventListener('click',()=>{const img=button.querySelector('img');large.src=img.src;large.alt=img.alt;viewer.classList.toggle('ably-overview-viewer',Boolean(button.closest('.ably-overview')));viewer.showModal();viewer.scrollTop=0;}));
+viewer.addEventListener('close',()=>viewer.classList.remove('ably-overview-viewer'));
 
 // Problem의 왼쪽 묶음을 실제 Before 이미지 표시 높이에 맞춰 정렬
 const problemGrid=document.querySelector('.hotels-problem-grid'),beforeImage=document.querySelector('.hotels-before-preview img');if(problemGrid&&beforeImage){const alignProblem=()=>{if(innerWidth<768){problemGrid.style.removeProperty('height');return;}const frame=document.querySelector('.hotels-before-frame');const imageHeight=beforeImage.naturalHeight/beforeImage.naturalWidth*frame.clientWidth;if(Number.isFinite(imageHeight))problemGrid.style.height=Math.max(650,Math.min(imageHeight,innerHeight-(innerHeight<=900?64:96)))+'px';};beforeImage.addEventListener('load',alignProblem);addEventListener('resize',alignProblem);if(beforeImage.complete)alignProblem();}
@@ -83,7 +84,7 @@ if(pair){const slides=JSON.parse(pair.dataset.pairSlides);let index=0;const imag
 pair.querySelector('.pair-prev').addEventListener('click',()=>showPair(index-1));pair.querySelector('.pair-next').addEventListener('click',()=>showPair(index+1));pair.querySelectorAll('[data-pair-index]').forEach(dot=>dot.addEventListener('click',()=>showPair(Number(dot.dataset.pairIndex))));pair.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();showPair(index+(e.key==='ArrowRight'?1:-1));}});let touch;images.addEventListener('touchstart',e=>{touch={x:e.touches[0].clientX,y:e.touches[0].clientY};},{passive:true});images.addEventListener('touchend',e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch.x,dy=e.changedTouches[0].clientY-touch.y;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))showPair(index+(dx<0?1:-1));touch=null;},{passive:true});}
 
 // 기존 효과가 없는 콘텐츠만 스크롤 등장 효과 연결
-import './scroll-content-reveal.js?v=20261013-scroll-reveal-1';
+import './scroll-content-reveal.js?v=20261014-ai-inplace-4';
 
 import './cover-workspace.js?v=20261013-content-gallery-6';
 

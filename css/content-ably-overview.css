@@ -1,0 +1,26 @@
+/* Content Design ABLY Overview 전용. 공유 Problem과 등장 코드는 그대로 사용합니다. */
+.uxui-editorial .ably-overview { --ably-pink:#F54F8D;--ably-soft-pink:#FFB5CE; }
+.uxui-editorial .ably-overview #hotels-problem-title,
+.ably-overview .hotels-problem-list li>span { color:var(--ably-pink); }
+.ably-overview .hotels-problem-list .ably-overview-keyword { color:var(--ably-soft-pink); }
+.ably-overview .hotels-feedback .ably-overview-keyword { color:#a52051; }
+.ably-overview .hotels-feedback-response p { background:#ffe8f0; }
+.ably-overview .hotels-feedback-response .hotels-feedback-avatar { background:var(--ably-pink); }
+/* 원본 길이에 영향받지 않는 상단 미리보기. */
+.ably-overview .hotels-feedback-response { justify-content:flex-start;margin-top:0;margin-bottom:28px; }
+.ably-overview .hotels-feedback-response p { max-width:100%; }
+.ably-overview .hotels-problem-list { margin-top:0; }
+.uxui-editorial .ably-overview>.hotels-problem-grid { height:auto!important;min-height:0;align-items:start; }
+.ably-overview .hotels-before-frame { height:clamp(550px,65svh,650px);min-height:0;align-self:start; }
+.ably-overview .hotels-before-preview { display:block;height:100%;min-height:0;overflow:hidden; }
+.ably-overview .hotels-before-preview img { display:block;width:100%;height:auto;max-height:none;object-fit:initial; }
+.media-viewer.ably-overview-viewer { max-height:92dvh;overflow-y:auto;overscroll-behavior:contain; }
+.media-viewer.ably-overview-viewer::backdrop { background:rgba(0,0,0,.78); }
+.media-viewer.ably-overview-viewer img { display:block;width:100%;height:auto;max-height:none;object-fit:contain; }
+@media(max-width:767px){.ably-overview .hotels-before-frame { height:550px; }.ably-overview .hotels-feedback-response { margin-bottom:20px; }}
+
+/* ABLY 03/04 경계: 콘텐츠 높이를 기준으로 늘어나고 화면 높이에 따라 여백 조절. */
+@media(min-width:768px){
+ body[data-category=content-design].uxui-editorial .ably-overview.works-template-section { min-height:100svh;height:auto;padding-top:clamp(100px,10svh,140px);padding-bottom:clamp(120px,13svh,160px); }
+}
+@media(max-width:767px){body[data-category=content-design].uxui-editorial .ably-overview.works-template-section { height:auto;padding-top:64px;padding-bottom:80px; }}
